@@ -1,0 +1,24 @@
+
+{
+         "images" : [
+                 { "id" : 1, "para1" : "Atena EPO 20 New York/Tri State", "image1":"./images/pdf.png","date1":"Apr 1,2015-Mar 31,2016","date2":"Apr 1,   2014 -Mar 31, 2015",
+                  
+                   "id" : 2, "para2" : "Aetna EPO 25 New York/Tri State" , "image2":"./images/pdf.png", "date1":"Apr 1,2015-Mar 31,2016","date2":"Apr 1, 2014 -Mar 31, 2015",  
+                  
+                   "id" : 3, "para3" : "Aetna EPO 30 New York/Tri State", "image3":"./images/pdf.png","date1":"Apr 1,2015-Mar 31,2016","date2":"Apr 1, 2014 -Mar 31, 2015"
+                 
+                  
+                  
+                     }
+                 
+                 ]
+}
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<script src="../js/angular.js"></script>
+		<script src="../js/angular-animate.js"></script>
+		<script src="../js/ui-bootstrap-tpls-2.3.1.min.js"></script>
+		<script src="../js/trinetBenifits.js"></script>		
+		<style>
+			a{
+				color: black;
+				font-weight: 600;
+			}
+			body{
+				margin-left: 50px;
+			}
+			.tooltip .tooltiptext {
+				top: -5px;
+				left: 105%; 
+			}
+		</style>	
+		<script>$("[data-toggle=tooltip]").tooltip();</script>
+	</head>
+	<body ng-controller="myCtrl">
+		<div>Benefit Summary effective April 1, 2015 to March 31, 2016.</div>
+		<div><p>All In One Group<br>
+			Benefit Program Description: Staff (Default Benefit Program)</p></div>
+		<div class="container">
+			<div>View a summary of all plans (available to your company with pay frequency bi-weekly)</div>
+			<div>View a CUSTOM list of plans (available to your company with pay frequency bi-weekly)</div>
+			<div><a  href="#">View the COBRA Benefits Summary</a></div>
+			Build or maintain Custom Benefit Summary<span class="badge" data-toggle="tooltip" data-placement="top" data-html="true" title="
+				Building Customized Benefits SummaryYou can build a customized version of your own 
+				Benefits Summary. We have added a BDSRate Chart Builder - like capability for you 
+				under Myself/My Benefits/Benefits Summary - Build or maintain your own Custom Benefits
+				Summary. Only you with the Benefits DecisionMaker role have access to this feature.Click				
+				on the Build or maintain link, and you will  be presented with a page of States areas.
+				Select the States and/or areas where you have employees or in which you or your employees
+				have an interest; such as places where you plan on opening new offices. Click the Build 
+				and Save Rate Chart button, and the CUSTOM list of plans link will be saved and made 
+				availableto you and all of your employees under Benefits Summary feature just above the
+				summary of ALL plans.You can come back at any time of the year to add or delete States/areas
+				and create anothercustom list."s>?</span>
+		</div>	
+	</body>
+</html>
+
+

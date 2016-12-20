@@ -1,0 +1,528 @@
+<html>
+	<head>				
+		<meta charset="UTF-8">
+		<title>TriNet</title>		
+		<link rel="stylesheet" href="css/trinetBenifits.css">		
+		<script src="js/angular.js"></script>
+		<script src="js/angular-animate.js"></script>
+		<script src="js/angular-sanitize.js"></script>
+		<script src="js/ui-bootstrap-tpls-2.3.1.min.js"></script>	
+		<script src="js/trinetBenifits.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+
+				$("#first").click(function(){
+
+					$("#panel").slideDown("slow");
+					/*$("#popover-header-content clearfix").slideUp("slow");*/
+
+
+				});
+				$("#second").click(function(){
+
+					$("#panel").slideDown("slow");
+					/*$("#popover-header-content clearfix").slideUp("slow");*/
+
+
+				});
+				$("#third").click(function(){
+
+					$("#panel").slideDown("slow");
+					/*$("#popover-header-content clearfix").slideUp("slow");*/
+				});
+				$("#fourth").click(function(){
+
+					$("#panel1").slideDown("slow");
+				});
+
+$("#sixth").click(function(){
+
+					$("#panel1").slideDown("slow");
+				});
+
+
+				$("#eight").click(function(){
+
+					$("#panel2").slideDown("slow");
+				});
+				$("#ninth").click(function(){
+
+					$("#panel2").slideDown("slow");
+				});
+				$("#tenth").click(function(){
+
+					$("#panel2").slideDown("slow");
+				});
+
+			});
+
+
+		</script>
+
+	</head>
+
+	<body ng-app="myApp" ng-controller="myCtrl">
+        
+        
+        
+        
+       
+            
+            
+        
+        
+        
+        
+
+		<div class="sidemenu">
+			<ul style="list-style-type: none; margin: 0; padding:0; width:50px; background-color:black; "><li vstyle="text-align: center; border-bottom: 2px solid #555;"><a style=" display: block; color: #000;padding-bottom:100%;
+				text-decoration: none;"  href="#/technical"></a></li><li style="text-align: center; border-bottom: 2px solid #555;"><a style=" display: block; color: #000;padding-bottom:100%;
+				text-decoration: none;" href="#/education"></a></li><li style="text-align: center; border-bottom: 2px solid #555;"><a style=" display: block; color: #000;padding-bottom:100%;
+				text-decoration: none;"  href="#/profession"></a></li><li style="text-align: center; border-bottom: 2px solid #555;"><a style=" display: block; color: #000;padding-bottom:100%;
+				text-decoration: none;" href="#/acheivements"></a></li></ul>
+		</div>
+		<div id="topmenu">
+			<h2 style="margin-left:0px;margin-top:0px;float:left;">People Tech</h2>
+		</div>
+		<div class="container-fluid">
+   
+          
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <p class="modal-title">Medical Atena</p>
+        </div>
+        <div class="modal-body">
+            
+            
+            
+            
+            
+                         <!--accordian code !-->
+            
+            
+            
+              
+    <div class="accordion" id="accordion2" >
+           <div class="accordion-group" ng-repeat="x in titles.records">
+               
+               
+         <div class="section">        
+           <div class="accordion-heading"  >
+           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">{{x.title1}}</a>
+            </div>
+         <div id="collapseOne" class="accordion-body collapse"    >
+          <div class="accordion-inner"  ng-repeat="x in headings.records">
+             
+              
+              
+              
+              
+              
+                 <table style="padding-top:10px; margin-top:40px;" ng-repeat="img in image.images">
+                        
+                     <tr style=" border-bottom: 1px solid green;">
+                      <th  style="border-right:1px solid green;">{{x.heading1}}</th>
+                      <th style="border-right:1px solid green;">{{x.heading2}}</th>
+                      <th >{{x.heading3}}</th>
+                    </tr>
+                     
+                     <tr>
+                       <td>{{img.para1}}</td>
+                       <td><a href="home.html" target="_blank" > <img ng-src="{{img.image1}}"> &nbsp;&nbsp;{{img.date1}}</a></td>
+                         <td><a href="home.html" target="_blank" ><img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date1}}<br>
+                           <img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date2}}</a></td>
+                     </tr>
+                         
+                  
+                     <tr>                         
+                        <td>{{img.para2}}</td>
+                         <td><a href="home.html" target="_blank"><img ng-src="{{img.image2}}">&nbsp;&nbsp;{{img.date1}}</a></td>
+                         <td><a href="home.html"  target="_blank"><img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date1}}<br>
+                            <img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date2}}</a></td>
+
+                     </tr>
+                     
+                     
+                     <tr>
+                         <td>{{img.para3}}</td>
+                         <td><a href="home.html" target="_blank" ><img ng-src="{{img.image3}}">&nbsp;&nbsp;{{img.date1}}</a></td>
+                         <td><a href="home.html" target="_blank" ><img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date1}}<br>
+                            <img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date2}}</a></td>
+
+                     </tr>
+                 </table>
+              
+              
+              
+              
+           
+              
+             
+         
+          </div>
+          </div>
+      </div>    
+               
+               
+                
+         <div class="section">  
+                      
+           <div class="accordion-heading"  >
+           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsetwo">{{x.title2}}</a>
+            </div>
+         <div id="collapsetwo" class="accordion-body collapse"   >
+          <div class="accordion-inner" >
+              <p>The TriNet Benefit Guidebook is both the Summary Plan Description for TriNet Group, Inc. Section 125, Section 129 and Flexible Spending Account Plan as well as the source of in-depth information on how the Plan operates. See the Carrier Certificates below for the Summary Plan Descriptions and specific benefit information.</p>
+             
+         
+          </div>
+          </div>
+               
+      </div>     
+               
+           <div class="section">           
+           <div class="accordion-heading"  >
+           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsethree">{{x.title3}}</a>
+            </div>
+         <div id="collapsethree" class="accordion-body collapse"   >
+          <div class="accordion-inner" >
+              <p>The TriNet Benefit Guidebook is both the Summary Plan Description for TriNet Group, Inc. Section 125, Section 129 and Flexible Spending Account Plan as well as the source of in-depth information on how the Plan operates. See the Carrier Certificates below for the Summary Plan Descriptions and specific benefit information.</p>
+             
+         
+          </div>
+          </div>
+               
+               </div>
+      
+               
+               
+               
+               
+       </div>
+      
+  </div>
+            
+      <!--accordian code end !-->     
+            
+      <!--accordian code end !-->    
+            
+            
+            
+            
+            
+            
+            
+            
+          
+        </div>
+       <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>-->
+      </div>
+      
+    </div>
+  </div>
+            
+            
+            
+            
+            
+
+			<h1 style="margin-top:50px; margin-left:60px;">{{BenifitsPolicies}}</h1>
+			<div class="row" class="popover-demo-container">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">                    
+					<div class="customBox" id="first" ng-click="slim()">
+						<span class="button ng-popover-trigger" id="normal-popover"><h4>{{heading1}}</h4><p ng-hide="less" ng-show="more">{{para111}}</p></span> 
+					</div>                    
+				</div>
+				<ng-popover trigger="normal-popover" popover-class="normal-text-popover" direction="bottom">
+					<div class="popover-header-content clearfix">
+						<span class="button" ng-click="closePopover('normal-popover')" style="float:right;border:none; padding:0px;">X</span>
+					</div>
+					<div ng-include='"htmls/Benifits Overview.html"'></div>
+				</ng-popover>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="customBox" id="second"  ng-click="slim()" style="margin:auto; padding-bottom:10px;padding-right:30px;">
+						<span class="button ng-popover-trigger" id="heading-popover"><h4>{{heading2}}</h4> <p ng-hide="less" ng-show="more">{{para22}}</p></span>
+					</div>
+
+				</div>
+				<ng-popover trigger="heading-popover" popover-class="heading-popover" direction="bottom">
+					<div class="condition-popover">
+						<div class="popover-header-content clearfix">
+							<span class="button" ng-click="closePopover('heading-popover')" style="float:right;border:none;">X</span>
+						</div>
+						<div class="popover-body">
+							<div ng-include='"htmls/Benifiys Guide Book.html"'></div>
+						</div>	      	
+					</div>
+				</ng-popover>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="customBox" id="third"  ng-click="slim()" style="margin:auto;">
+						<span class="button ng-popover-trigger" id="custom-popover"> <h4>{{heading3}}</h4><p ng-hide="less" ng-show="more">{{para33}}</p></span>
+					</div>
+				</div>				
+			</div>
+			<ng-popover trigger="custom-popover" popover-class="custom-popover" direction="bottom">
+				<div class="popover-header-content clearfix">
+					<span class="button" ng-click="closePopover('custom-popover')" style="float:right;border:none;" >X</span>
+				</div>
+				<div class="condition-popover">
+					<div ng-include='"htmls/Benifits  Summary.html"'></div>
+				</div>	
+			</ng-popover>			
+			<div id="panel" ng-show="less" ng-hide="more" style="height:1570px;"></div>
+			<div class="row" class="popover-demo-container">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="customBox" id="fourth" ng-click="slim1()"><span class="button ng-popover-trigger" id="custom-popover1"><h4>{{heading4}}</h4><p ng-hide="less1" ng-show="more1">{{para44}}</p></span>
+					</div>
+				</div>
+				<ng-popover trigger="custom-popover1" popover-class="custom-popover1" direction="bottom">
+					<div class="popover-header-content clearfix">
+						<span class="button" ng-click="closePopover('custom-popover1')" style="float:right;border:none;" >X</span>
+					</div>
+					<div class="custom-popover123">
+						<div ng-include='"htmls/SummaryPlanDescription.html"'></div>
+					</div>	
+				</ng-popover>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="customBox"id="fifth"  ng-click="slim1()" style="margin:auto; padding-right:70px;"><h4>{{heading5}}</h4>
+						<p ng-hide="less1" ng-show="more1">{{para55}}</p></div></div>
+
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="customBox" id="sixth"  ng-click="slim1()" style="margin:auto;padding-right:30px;">
+						<span class="button ng-popover-trigger" id="custom-popover11"><h4>{{heading6}}</h4><p ng-hide="less1" ng-show="more1">{{para66}}</p></span>
+					</div>
+				</div>
+
+				
+			</div>
+            <ng-popover trigger="custom-popover11" popover-class="custom-popover11" direction="bottom">
+					<div class="popover-header-content clearfix">
+						<span class="button" ng-click="closePopover('custom-popover11')" style="float:right;border:none;" >X</span>
+					</div>
+					<div class="custom-popover11">
+						<div ng-include='"htmls/stateandfederal.html"'></div>
+					</div>	
+				</ng-popover>
+			<div id="panel1" ng-show="less1" ng-hide="more1" style="height:1550px;"></div>
+
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="customBox" id="seventh" ng-click="slim2()">
+						<h4>{{heading7}}</h4><p ng-hide="less2" ng-show="more2">{{para77}}</p></div></div></div>               
+
+			<h3>{{GeneralInformation}}</h3>			
+			<div class="row" class="popover-demo-container">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="customBox" id="eight" ng-click="slim3()" style="padding-bottom:30px;">
+						<span class="button ng-popover-trigger" id="normal-popover1"><h4>{{heading8}}</h4><p ng-hide="less3" ng-show="more3">{{para88}}<p/></span>
+					</div>
+
+				</div>
+				<ng-popover trigger="normal-popover1" popover-class="normal-text-popover" direction="bottom">
+					<div class="popover-header-content clearfix">
+						<span class="button" ng-click="closePopover('normal-popover1')" style="float:right;border:none; padding:0px;">X</span>
+					</div>
+					<div ng-include='"htmls/Benifits Carrier Contacts.html"'></div>
+				</ng-popover>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="customBox" id="ninth"  ng-click="slim3()" style="margin:auto;">
+						<span class="button ng-popover-trigger" id="heading-popover1"><h4>{{heading9}}</h4><p ng-hide="less3" ng-show="more3">{{para99}}
+							</p></span>
+					</div>
+
+				</div>  
+
+
+				<ng-popover trigger="heading-popover1" popover-class="heading-popover" direction="bottom">
+					<div class="condition-popover">
+						<div class="popover-header-content clearfix">
+							<span class="button" ng-click="closePopover('heading-popover1')" style="float:right;border:none;padding:0px;">X</span>
+						</div>
+						<div class="popover-body">
+							<div ng-include='"htmls/Metlife Benifits.html"'></div>
+						</div>	      	
+					</div>
+				</ng-popover>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					
+					<div class="customBox" id="tenth"  ng-click="slim3()"  style="margin:auto; padding-bottom:50px;padding-right:120px;">
+						<span class="button ng-popover-trigger" id="custom-popover2"><h4>{{heading10}}</h4><p ng-hide="less3" ng-show="more3">{{para100}}</p></span></div>
+				</div>
+
+
+
+			</div> 
+            
+            
+          
+            
+            
+            
+            
+            
+            
+			<ng-popover trigger="custom-popover2" popover-class="custom-popover" direction="bottom" style="float:left;">
+				<div class="popover-header-content clearfix">
+					<span class="button" ng-click="closePopover('custom-popover2')" style="float:right;border:none;" >X</span>
+				</div>
+				<div class="condition-popover">
+					<div ng-include='"htmls/Aflac Benifits.html"'></div>
+				</div>	
+			</ng-popover>	
+			<div id="panel2" ng-show="less3" ng-hide="more3" style="height:380px;"></div>
+
+
+			<h3>{{BenifitsCarriers}}</h3>
+            
+            
+            
+            
+             
+            
+            
+            
+			<div class="row">
+
+
+            <!--   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+-->
+
+
+
+
+
+
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div id="eleventh">
+
+						<img ng-src="{{one}}"  style="width:250px; height:100px; padding-left:46px;" data-toggle="modal" data-target="#myModal" ></div>
+				</div>
+
+
+
+                
+                 
+              
+  
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div id="tweleveth" style="margin:auto;">
+						<img ng-src="{{two}}"  style="width:250px; height:100px; margin-left:8px;" onclick="location.href='http://www.floaridablue.com';"></div></div>               
+
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="thirteenth" style="margin:auto;">
+						<img ng-src="{{three}}" style="width:250px; height:100px;margin-left:-3em;" onclick="location.href='http://www.bluecrossblueshield.com';"></div></div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="fourteenth" style="margin:auto;">
+						<img ng-src="{{four}}"  style="width:250px; height:100px; margin-left:-6.5em;" onclick="location.href='http://www.blueofcalifornia.com';"></div></div>
+
+			</div>               
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div id="fifteenth">
+						<img ng-src="{{five}}"  style="width:250px; height:100px; padding-left:46px;" onclick="location.href='http://www.unitedhealthcare.com';"></div></div>
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div id="sixteenth" style="margin:auto;">
+						<img ng-src="{{six}}"  style="width:250px; height:100px; margin-left:8px;" onclick="location.href='http://www.metlife.com';"></div></div>               
+
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="seventeenth" style="margin:auto;">
+						<img ng-src="{{seven}}"  style="width:250px; height:100px; margin-left:-3em;" onclick="location.href='http://www.kaiserpermanente.com';"></div></div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div id="eighteenth" style="margin:auto;">
+						<img ng-src="{{eight}}" style="width:250px; height:100px; margin-left:-6.5em;" onclick="location.href='http://www.aflac.com';"></div></div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="nineteenth">
+						<img ng-src="{{nine}}" style="width:250px; height:100px; padding-left:46px;" onclick="location.href='http://www.tufts.com';"></div></div></div>
+
+
+
+			<h3>{{OtherHealthPlans}}</h3>
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="twenty">
+						<img ng-src="{{ten}}" style="width:250px; height:100px; padding-left:46px;">
+					</div></div>
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="twentyone" style="margin:auto;">
+						<img ng-src="{{eleven}}" style="width:250px; height:100px; margin-left:8px;"> </div></div>               
+
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="twentythree" style="margin:auto;">
+						<img ng-src="{{twelve}}" style="width:250px; height:100px; margin-left:-3em;"></div></div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="twentyfour" style="margin:auto;">
+						<img ng-src="{{thirteen}}" style="width:250px; height:100px; margin-left:-6.5em; "> </div></div>
+
+			</div>               
+
+
+
+			<h3>{{OtherSupplementalPlans}}</h3>
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div id="twentyfive">
+						<img ng-src="{{fourteen}}" style="width:250px; height:100px; padding-left:46px;"> </div></div>
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="twentysix" style="margin:auto;"><img ng-src="{{fifteen}}" style="width:250px; height:80px; margin-left:8px;">
+					</div></div>               
+
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div  id="twentyseven" style="margin:auto;">
+						<img ng-src="{{sixteen}}" style="width:250px; height:100px; margin-left:-3em;"></div></div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div id="twentyeight" style="margin:auto;">
+						<img ng-src="{{seventeen}}" style="width:250px; height:100px; margin-left:-6.5em;">
+						.</div></div>
+
+			</div>               
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div id="twentynine">
+						<img ng-src="{{eighteen}}" style="width:250px; height:100px; padding-left:46px;">
+					</div></div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<div id="thirty">
+						<img ng-src="{{ninteen}}" style="width:250px; height:100px; margin-left:8px;">
+					</div></div>
+			</div>
+		</div>
+	</body>
+</html>

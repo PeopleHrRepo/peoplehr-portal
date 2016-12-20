@@ -1,0 +1,147 @@
+{
+	"headings":[
+		{"BenifitsPolicies":"Benifits Policies"},
+		{"BenifitsCarriers":"Benifits Carriers"},
+		{"GeneralInformation":"General Information"},		
+		{"OtherHealthPlans":"Other Health Plans"},
+		{"SummaryPlanDescription":"Summary Plan Description"},
+		{"WhatsChangingMedicalSummary":"What’s Changing Medical Summary"},	
+		{"BenefitsAtAGlance":"Benefits At-A-Glance"},	
+		{"CarrierCertificatesandSummaryofBenefitsandCoverages":"Carrier Certificates and Summary of Benefits and Coverages"},{"Medical":"Medical"},	
+		{"Dental":"Dental"},	
+		{"Vision":"Vision"},	
+		{"Life":"Life"},	
+		{"Disability":"Disability"},	
+		{"EmployeeAssistancePlan":"Employee Assistance Plan"},	
+		{"AnnualNotices":"Annual Notices"},	
+		{"GeneralNotices":"General Notices"}	
+	],	
+	"rowOne":[
+		{"heading1":"Benefits Overview", "para111":"Look at your company's contributions for each plan in your company's benefits package."}, 
+		{"heading2":"Benefits Guide Book", "para22":"Information you need to explore all of your benefits options."},
+		{"heading3":"Benefits Summary", "para33":"Look at the cost of each plan in your company's benefits package."}
+	],
+	"rowTwo":[
+		{"heading4":"Summary Plan Description", "para44":"Contains in-depth information about your benefits coverage."}, 
+		{"heading5":"ACA Marketplace Notifications", "para55":"New Health Insurance Marketplace Coverage Options and Your Health Coverage"},
+		{"heading6":"State & Federal Notices", "para66":"Please review some important information about your rights."},
+		{"heading7":"Additional Policies", "para77":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula mauris."}
+	],	
+	"rowThree":[
+		{"heading8":"Benefits Carrier Contacts", "para88":"Provider Directories. Search for healthcare providers who serve your geographic area."}, 
+		{"heading9":"MetLife Benefits", "para99":"Bolster your benefits with voluntary benefits options: Annuities, Auto, Critical Illness, Home,Pet Insurance, Variable Life, and much more."},
+		{"heading10":"Aflac Benefits", "para100":"Gain additional insurance options from Aflac."}		
+	],
+	"images":[
+		{"dest1":"/images/aetna.png"},
+		{"dest2":"/images/florida1.png"},
+		{"dest3":"/images/bluecross1.png"},
+		{"dest4":"/images/bluecalifornia.png"},
+		{"dest5":"/images/united.png"},
+		{"dest6":"/images/metlife.png"},
+		{"dest7":"/images/kaiser.png"},
+		{"dest8":"/images/aflac.png"},
+		{"dest9":"/images/tufts.png"},
+		{"dest10":"/images/cigna.png"},
+		{"dest11":"/images/grouphealth.png"},
+		{"dest12":"/images/hmsa.jpg"},		
+		{"dest13":"/images/triples.png"},
+		{"dest14":"/images/aetna.png"},
+		{"dest15":"/images/dentaldental.png"},
+		{"dest16":"/images/caurdian.jpg"},
+		{"dest17":"/images/metlife.png"},
+		{"dest18":"/images/vsp.jpg"},
+		{"dest19":"/images/kaiser.png"}
+	],
+	"paragraphs":[
+		{"para1":"TriNet Benefits Guidebook and Summary Plan Description (April 01, 2015 - March 31, 2016)"},
+		{"para2":"TriNet Benefits Guidebook and Summary Plan Description (April 01, 2014 - March 31, 2015)"},
+		{"para3":"2015 What’s Changing"},
+		{"para4":"Glossary of Terms used in the Summary of Benefits and Coverages"},
+		{"para5":"Carrier Certificates (April 01, 2014 - March 31, 2015)"},
+		{"para6":"Carrier Certificates (April 01, 2013 - March 31, 2014)"},
+		{"para7":"Carrier Certificates (April 01, 2013 - March 31, 2014)"},
+		{"para8":"Connecticut Insurance Bulletin HC-61 Notice"},
+		{"para9":"General Notice of COBRA Continuation Coverage Rights"},
+		{"para10":"GINA Rights Notice"},
+		{"para11":"HIPAA Privacy Notice"},
+		{"para12":"Michelle's Law Enrollment Rights Notice"},		
+		{"para13":"Newborn’s and Mother’s Health Protection Act"},
+		{"para14":"Women’s Health and Cancer Rights Act"}	
+	],
+	"names" : [
+		{ "id1" :1, "title1" : "Newborns’ and Mothers’ Health Protection Act",
+
+		 "para1":" On September 26, 1996, a Federal law known as the Newborns' and Mothers' Health Protection Act of 1996 (“Newborns' Act”) was enacted to include new protections for mothers and their newborn children with regard to the length of the hospital stay following childbirth. This notice is intended to inform you, in a summary fashion, of your rights under the law.",
+
+		 "para2": "Group health plans and health insurance issuers generally may not, under federal law, restrict benefits for any hospital length of stay in connection with childbirth for the mother or newborn child to less than 48 hours following a vaginal delivery, or less than 96 hours following a cesarean section.",
+
+
+		 "para3": "However, federal law generally does not prohibit the mother's or newborn's attending provider, after consulting with the mother, from discharging the mother or her newborn earlier than 48 hours (or 96 hours as applicable.)",
+
+		 "para4":"  In any case, plans and issuers may not, under federal law, require that a provider obtain authorization from the plan or the issuer for prescribing a length of stay not in excess of 48 hours (or 96 hours.)",
+
+		 "para5":" If your state has a law that provides similar hospital stay protections and your plan oﬀers coverage through an insurance policy or HMO, then you may be protected under state law rather than the Newborns' and Mothers' Health Protection Act.",
+
+		 "title2":"Notification of Rights under the Women's Health and Cancer Rights Act",
+
+		 "para6":"On October 21, 1998, a Federal law (H.R. 4328) known as the Women's Health and Cancer Rights Act of 1998 (“Women's Health Act”) was enacted requiring group health plans and insurance companies that provide coverage for mastectomies to provide certain mastectomy-related benefits or services to plan participants or beneficiaries. This notice is intended to inform you, in a summary fashion, of your rights under the law.",
+
+		 "para7":" Under the law, a group health plan participant or beneficiary who is receiving benefits in connection with a mastectomy, and who elects breast reconstruction in connection with the mastectomy, is entitled to coverage for the following:",
+
+		 "para8":"1. Reconstruction of the breast on which the mastectomy has been performed;",
+
+		 "subpara1":"2. Surgery and reconstruction of the other breast to produce a symmetrical appearance; and ",
+		 "subpara2": "3. Prostheses and treatment of physical complications at all stages of mastectomy, including lymphedemas.",
+
+		 "para9":"Coverage for these benefits or services will be provided in a manner determined in consultation with the participant's or beneficiary's attending physician.",
+
+		 "para10":"   If you are a covered member or qualified dependent under the TriNet Group, Inc., and Its Subsidiaries Medical Plan #501, and are currently receiving, or in the future receive, benefits under the plan in connection with a mastectomy, you are entitled to coverage for the benefits and services described above in the event that you elect breast reconstruction. Your qualified dependents are also entitled to coverage for those benefits or services on the same terms.",
+
+		 "para11":"Coverage for the mastectomy-related services or benefits required under the Women's Health Law will be subject to the same deductibles and coinsurance or co-payment provisions that apply with respect to other medical or surgical benefits provided under the TriNet Group, Inc., and Its Subsidiaries Medical Plan #501." 
+		}                                   
+
+	],
+
+	"Aflacheadings":[
+		{"h1":"Accident Insurance","p1":"For a covered accident, you may receive cash benefits for use as you see fit"},
+		{"h2":"Cancer Insurance","p2":"For a covered accident, you may receive cash benefits for use as you see fit"},
+		{"h3":"Dental Insurance","p3":"Aflac’s dental insurance policy provides benefits for periodic checkups and cleanings, X-rays, fillings, crowns, and much more."},
+		{"h4":"Hospital Confinement Indemnity","p4":"Aflac’s hospital confinement indemnity insurance policy may provide cash benefits to use as you see fit."},
+		{"h5":"Hospital Intensive Care Insurance","p5":"Aflac’s hospital intensive care insurance policy may provide cash benefits for accidents or illnesses that result in an admission to a hospital’s intensive care unit. "},
+		{"h6":"Life Insurance","p6":"Aflac oﬀers a variety of term and whole life insurance plans"},
+		{"h7":"Specified Disease Insurance","p7":"Aflac’s specified disease insurance policy may provide cash benefits for a specified health event, such as coronary artery bypass, organ transplant or stroke."},
+		{"h8":"Short-Term disability","p8":"Aflac’s short-term disability insurance policy may provide cash benefits for disabilities that result from a covered accident or sickness."},
+		{"h9":"Vision Insurance","p9":"Aflac’s vision insurance policy provides benefits for periodic eye exams, vision correction surgery, and much more."}
+	],
+	"BGB":[
+		{"title1":"TriNet Benefits Guidebook and Summary Plan Description (April 01, 2015 - March 31, 2016)"},
+		{"title2":"TriNet Benefits Guidebook and Summary Plan Description (April 01, 2014 - March 31, 2015)"},
+		{"title3":"The TriNet Benefit Guidebook contains information that’s important to you and your family about:"},
+		{"list1":"Who is eligible for coverage"},
+		{"list2":"How to enroll and how premiums are taxed"},
+		{"list3":"How to change your benefits"},
+		{"list4":"Benefits appeals"},
+		{"list5":"Benefits contact information"},
+		{"list6":"COBRA Information"},
+		{"list7":"FSA information"},
+		{"list8":"Important benefits protections such as HIPAA and ERISA"},
+		{"list9":"Required notices"}
+	],
+    
+    
+    
+     "heading" : [
+                    { "id" :"1", "title1" : "Benefits Carrier Contact Chart(April 01, 2015 - March 31, 2016)","image1":"images/pdf.png",
+                    
+                  
+                     "title2" : "Benefits Carrier Contact Chart(April 01, 2015 - March 31, 2016)", "image2":"images/pdf.png",
+                    
+                       "para":"Available physicians and provider information can be obtained in a variety of ways; you can call member services or access the on-line directories from the web. If you have a question concerning services and/or prescriptions, you may contact the plan directly.To view physicians and provider information click on the following links."
+                    
+                    }
+                    ]
+    
+    
+
+}

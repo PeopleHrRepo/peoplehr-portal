@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body ngapp="myApp" ng-controller="myCtrl">
+<div><p>Available physicians and provider information can be obtained in a variety of ways; you can call member services or access the on-line directories from the web. If you have a question concerning services and/or prescriptions, you may contact the plan directly.To view physicians and provider information click on the following links.
+</p></div><br>
+<div style="background-color:bisque">
+	<a href="#"><i class="fa fa-file-pdf-o" style="font-size:24px"></i> TriNet Benefits Guidebook and Summary Plan Description(April 01, 2015 - March 31, 2016)</a>
+</div>
+<div style="background-color:bisque">
+	<a href="#"><i class="fa fa-file-pdf-o" style="font-size:24px"></i> TriNet Benefits Guidebook and Summary Plan Description(April 01, 2014 - March 31, 2015)</a>
+</div><br>
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+   
+    <script src="../js/angular.js"></script>
+   <script src="../js/trinetBenifits.js"></script>
+</head>
+    
+<body>
+<div   style="width: 80%;margin: 20px auto;"  ng-controller="myCtrl" >
+    
+    <div ng-repeat="x in results.heading" >
+    
+ 
+ <div class="location">   
+  <p>{{x.para}}</p>
+ 
+     <a href="home.html" ><p style="background:lightpink;" target="_blank"><img ng-src="{{x.image1}}">{{x.title1}}</p></a>  <br>   
+        
+     <a href="home.html" > <p style="background:lightpink;" target="_blank"><img ng-src="{{x.image1}}">{{x.title1}}</p> </a>       
+  
+
+        
+        </div>
+    </div>
+    </div>
+</body>
+</html>
