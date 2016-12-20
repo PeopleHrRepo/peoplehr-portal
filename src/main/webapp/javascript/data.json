@@ -1,0 +1,26 @@
+{
+            "headings":[
+                {"heading1":"Additional Begin/End Pay 1","heading2":"Earning Statement","heading3":"Payroll Estimates","heading4":"Tax Withholding","heading5":"Retirement Plan Enrollment"}
+               
+            ],
+            "headings_values":[
+              {"value":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
+            ],
+            
+            "payroll":[
+                {"pheading1":"Salary PayCheck Calculator","value1":"Enter the gross pay and estimate the net (take-home) pay after state and local taxes and deductions",
+                "pheading2":"Hourly PayCheck Calculator","value2":"Enter diﬀerent hourly rates and estimate the net amount after state and local taxes and deductions.",
+                "pheading3":"Bounce Calculator by percent","value3":"Enter a gross bonus amount and estimate the net bonus amount after state and local taxes and deductions.",
+                "pheading4":"Gross up Calculator","value4":"Use this form when you have a desired net pay in mind. Enter the net (take-home) pay and the tax withholding to estimate the gross pay necessary to equal the net pay amount."}
+            ],
+            "tax_fedral":[
+                {"headings1":"Federal Tax","headings2":"W-4 form IRS Calculator","headings3":"Allowance","value":"0","add_head":"Additional Amount","value1":"0.00","add_head1":"Martial Status","value2":"Single","add_head2":"Exempt","value3":"NO"}      
+            ],
+            "tax_NYF":[
+                {"headings1":"NY State Tax","headings2":"NY Tax Form","headings3":"Allowance","value":"0","add_head":"Additional Amount","value1":"0.00","add_head1":"Martial Status","value2":"Married with 2","add_head2":"Exempt","value3":"NO"}  
+            ],
+            "retirement_details":[
+                {"heading1":"Election for","name":"Jennifer M.Blaire (EMPID:0000122158)","plan":"401k"}
+            ]
+           
+}

@@ -1,0 +1,28 @@
+{ "transaction":[
+  {
+    "status":"On Going",
+    "begindate":"03/20/2015",
+    "enddate":"NoEndDate",
+    "payfrequency":"Every Payroll",
+    "earntype":"Additional Allowance",
+    "earnamount":"$500.00"
+  },
+  {
+    "status":"On Going",
+    "begindate":"03/10/2015",
+    "enddate":"07/30/2015",
+    "payfrequency":"1st and 2nd Payrolls of Month",
+    "earntype":"Commission",
+    "earnamount":"$1,200.00"
+  },
+  {
+    "status":"Ended",
+    "begindate":"02/06/2015",
+    "enddate":"02/15/2015",
+    "payfrequency":"2nd Payroll of Month",
+    "earntype":"Car Allowance",
+    "earnamount":"$75.00"
+  }
+]}
+
+

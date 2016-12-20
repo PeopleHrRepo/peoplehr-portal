@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/employee.css"/>
+    <!--rajeshfiles-->
+        <link rel="stylesheet" type="text/css" href="stylesheets/employeerajesh.css"/>
+        <script src="https://code.angularjs.org/1.5.3/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--end-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+  
+    <link rel="stylesheet" type="text/css" href="stylesheets/manageempcss.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/ext_style.css"/>
+</head>
+
+<body ng-controller="myCtrl" ng-app="myApp">
+<header><img id="logo" src="images/ptglogo.jpg"/></header>
+<div id="mainpage">
+    <div id="page">
+        <div id="top">
+            <a href="" ng-click="mainpage()"><span class="sub1">< Home </span></a>
+            <ul class="align">
+                <li><a href="">COMPANY</a></li>
+                <li><a href="">ME</a></li>
+            </ul>
+            <div style="clear: both;"></div>
+        </div>
+        <div ng-show="main">
+            <h2 style="color:steelblue;margin-top: -7px" >Manage Employees<sub class="sub2">hiDOF, Inc</sub></h2><br/>
+            <div class="top">
+                <ul class="align-left">
+                    <li class="active"><a href="" ng-click="employee()">ALL EMPLOYEES</a></li>
+                    <li><a href="" ng-click="deptinfo()">DEPARTMENT</a></li>
+                    <li><a href="" ng-click="locations()">LOCATIONS</a></li>
+                    <li><a href="" ng-click="eforms()">E-FORMS</a></li>
+                    <span class="align-right"> <input type="text" ng-model="searchKey" placeholder="Search Employee"/>
+                    <button id="button1">New Hire</button>
+                    <span class="glyphicon glyphicon-cog"></span>
+                    </span>
+                    <div style="clear: both;"></div>
+                </ul>
+            </div>
+
+            <table class="emp" ng-show="emps">
+                <thead>
+                <tr>
+                    <th>Employee Name<a class="glyphicon glyphicon-sort-by-alphabet-alt"></a></th>
+                    <th>Position<a class="glyphicon glyphicon-filter"></a></th>
+                    <th>Status<a class="glyphicon glyphicon-filter"></a></th>
+                    <th>Department<a class="glyphicon glyphicon-filter"></a></th>
+                    <th>Location<a class="glyphicon glyphicon-filter"></a></th>
+                    <th>Service Date</th>
+                    <th>Direct Manager</th>
+                    <th>Contacts</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="employee in employees|filter:searchKey" ng-click="empinfo()">
+                    <td><a href="">{{employee.EmployeeName}}
+                        <sub class="sub4">Emp Id:{{employee.EmpId}}</sub></a></td>
+                    <td><a href="">{{employee.Position}}</a></td>
+                    <td><a href="">{{employee.Status}}</a></td>
+                    <td><a href="">{{employee.Department}}</a></td>
+                    <td><a href="">{{employee.Locations}}</a></td>
+                    <td><a href="">{{employee.ServiceDate}}</a></td>
+                    <td><a href="">{{employee.DirectManager}}</a></td>
+                    <td><a href=""><span>&#9993;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&#128222;</span></a></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div ng-show="deptinf">
+
+                <table class="emp">
+                    <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Department</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="employee in employees|filter:searchKey">
+                        <td><a href="">{{employee.EmployeeName}}
+                            <sub class="sub4">Emp Id:{{employee.EmpId}}</sub></a></td>
+                        <td><a href="">{{employee.Department}}</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div ng-show="location">
+                <table class="emp">
+                    <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Locations</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="employee in employees|filter:searchKey">
+                        <td><a href="">{{employee.EmployeeName}}
+                            <sub class="sub4">Emp Id:{{employee.EmpId}}</sub></a></td>
+                        <td><a href="">{{employee.Locations}}</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <footer>221 Employees in Total</footer>
+        </div>
+    </div>
+
+    <div id="main" ng-show="person">
+        <form>
+            <div>
+                <img id="img1" src="images/images.jpg"/>
+                <h3 style="font-size: 25px; margin-bottom:3px; ">Jen Blaire &nbsp;<span style="font-size:13px; color:dimgrey; font-weight: lighter ">&#9998;</span></h3>
+                <div id="view">
+                    <a href="" style="text-decoration: none; font-size: 13px; margin-right:5px;">View in Organization Chart</a><span>&nbsp;</span>
+                </div>
+                <p class="para">Sr.Director <br/>
+                    Consulting | Belmont, CA <br/>&#9993; jen.blaire@hidof.com &nbsp; &#9998; | &#128222; &nbsp;510.248.3369 &nbsp; &#9998;
+                </p>
+                <div id="btn2">
+                        <span class="align-right"><button type="button" class="btnhead">Request Extended Leave</button>
+                            <button type="button" class="btnhead">Terminate</button>&nbsp;</span>
+                </div>
+                <div style="clear: both;"></div>
+            </div><br/><br/>
+            <ul class="align-left" id="list">
+                <li><a ng-click="personal()">PERSONAL</a></li>
+                <li><a ng-click="workinfo()">WORK INFO</a></li>
+                <li><a ng-click="money()">MONEY</a></li>
+                <li><a ng-click="timeoff()">TIME OFF</a></li>
+                <li><a ng-click="benefits()">BENEFITS</a></li>
+                <li><a ng-click="roles()">ROLES</a></li>
+                <li><a ng-click="eform()">E-FORMS</a></li>
+            </ul>
+            <div ng-show="isWork">
+                <p>This tab belongs to Work Information.</p>
+            </div>
+
+            <div ng-show="isTimeoff">
+                <p>This tab belongs to TimeOff.</p>
+            </div>
+
+            <div ng-show="isBenefits">
+                <p>This Tab belongs to Benefits.</p>
+            </div>
+
+            <div ng-show="isRoles" >
+                <p>This tab belongs to Roles.</p>
+            </div>
+
+            <div ng-show="isEform">
+                <p>This tab belongs to E-Forms.</p>
+            </div>
+            <div ng-show="isPersonal" id="personalid">
+                <h4 class="head">Names</h4>
+                <div id="wrapper">
+                    <div id="first">
+                        <span>Legal Name: Jennifer M. Blaire</span>
+                    </div>
+                    <div id="second">
+                        <span>Preferred Name: Jen Blaire</span>
+                    </div>
+                </div>
+                <h4 class="head">Contact Methods</h4>
+                <div id="wrapper1">
+                    <div id="first1">
+                        <ul>
+                            <li>Work:jen.blaire@hidof.com </li>
+                            <li>Personal:jblaire@gmail.com</li></ul>
+                    </div>
+                    <div id="second1">
+                        <ul>
+                            <li>Work:510.248.3369</li>
+                            <li>home:210.433.2870</li>
+                            <li>Mobile: 510.764.8970</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4 class="head">Home Address</h4>
+                <div id="wrapper2">
+                    <div id="first2">
+                        <ul>
+                            <li>9805 Double R Blvd</li>
+                            <li>Tuscon, AZ</li>
+                            <li>United States  87152</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4 class="head">Personal Information</h4>
+                <div id="wrapper3">
+                    <div id="first3">
+                            <span id="db">
+                                Birthdate:01/12/1981 <br>
+                                Gender:Female
+                            </span>
+                        <span id="ew">
+                                Ethnicity:White (Not Hispanic or Latino)<br>
+                                SSN:XXX-XX-0987
+                            </span>
+                    </div>
+                </div>
+                <h4 class="head">Personal Status</h4>
+                <div id="wrapper4">
+                    <div id="first4">
+                            <span id="ms">
+                                Marital Status:Married      <br>
+                                Military Status: ----
+                            </span>
+                        <span id="ds">
+                                Citizenship:United States of America <br>
+                                Disability Status:----
+                            </span>
+                    </div>
+                </div>
+                <h4 class="head">Emergerncy Contact</h4>
+                <div id="wrapper5">
+                    <div id="first5">
+                        <h3>No Emergerncy Contact</h3>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div ng-show="isMoney">
+        <button class="accordion">Additional Begin/End Pay</button>
+        <div class="panel">
+            <div>
+                <p id="alignleft">Transactions listed here are in the last 90 days:</p>
+                <br>
+                <button id="alignright">Create New Payment</button>
+                <div style="clear: both;"></div>
+                <br>
+            </div>
+            <div id="info">
+                <table id="maintable">
+                    <thead>
+                    <tr style="background-color: steelblue;color:white;height:50px" >
+                        <th></th>
+                        <th>Status</th>
+                        <th>Begin Date</th>
+                        <th>End Date</th>
+                        <th>Pay Frequency</th>
+                        <th>Earn Type</th>
+                        <th>Earn Amount<sub style=" display: flex;">(selected per pay frequency)</sub></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr  ng-repeat="emp in empdetails|orderBy:['-status','-begindate']" ng-click="showdetails(emp,$index)" style="overflow-y: scroll">
+                        <td>
+                            <div ng-if="emp.status=='On Going'" ng-init="cb1=true">
+                                <div id="switchContainer" layout="column" ng-cloak >
+                                    <md-switch id="newpay"  ng-model="cb1" aria-label="Switch 1" ng-click="onChange($index,emp);$event.stopPropagation();">
+                                    </md-switch>
+                                </div>
+                            </div>
+                            <div ng-if="!(emp.status=='On Going')">
+                            </div>
+                        </td>
+                        <td>{{emp.status}}</td>
+                        <td>{{emp.begindate}}</td>
+                        <td>{{emp.enddate}}</td>
+                        <td>{{emp.payfrequency}}</td>
+                        <td>{{emp.earntype}}</td>
+                        <td>{{emp.earnamount}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+        </div>
+    <button class="accordion">Earning Statement</button>
+    <div class="panel">
+
+
+        <!--<div class = "container">-->
+            <!--<div class="panel-group" id="accordion"> <br>-->
+                <!--<div class="panel panel-default">-->
+                    <!--<div class="panel-heading">-->
+                        <!--<h4 class="panel-title">-->
+                            <!--<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">-->
+                                <!--Earning Statement-->
+                            <!--</a>-->
+                        <!--</h4>-->
+                    <!--</div>-->
+                    <!--<div id="collapseTwo" class="panel-collapse collapse out">-->
+                        <!--<div class="panel-body">-->
+                            <div>
+
+    <span style="float:top;">
+
+        <select ng-model="selectedName" style="width:90px;height:25px;" ng-options="x for x in names"  >
+
+        </select>
+   <span class="pull-right">
+       <br/>
+        <div class="dropdown">
+        <p align="left" class="dropbtn"><span class="glyphicon">&#xe011;</span> &nbsp;&nbsp;Estimation Tools <span class="glyphicon glyphicon-menu-down " style="darkblue"></span></p>
+         <div class="dropdown-content">
+    <a href="calculator1.html">Salary Paycheck Calculator</a>
+    <a href="calculator1.html">Hourly Paycheck Calculator</a>
+    <a href="calculator1.html">Bonus Calculator by Percent</a>
+     <a href="calculator1.html">Gross-Up Calculator</a>
+  </div>
+        </div>
+        </span>
+
+
+        <table id="table1">
+        <tr style="background-color: steelblue;color:white;height:50px">
+            <th>CheckNo &nbsp;&nbsp;&nbsp;&nbsp; </th>
+            <th>PayEndDate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>PayDate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>NetPay  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th></th>
+        </tr>
+        <tbody>
+        <tr ng-repeat="employee in statement|filter:selectedName" >
+            <td>{{employee.CheckNo}}
+            <td>{{employee.PayEndDate}}</td>
+            <td>{{employee.PayDate}}</td>
+
+            <td>{{employee.NetPay}}</td>
+             <td>
+            <div>
+
+
+
+                <a id="btnrec" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalreceipt">View Details</a>
+                <!--<a href="" id="btnrec" ng-click="viewdetails()">view Details</a>-->
+
+
+                <!-- Modal -->
+  <div class="modal fade" id="myModalreceipt" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content1receipt">
+        <div class="modal-headerreceipt">
+          <button type="button" class="closereceipt" data-dismiss="modal">&times;</button>
+          <h2 style="color: white">View Statement</h2>
+  </div>
+                <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">
+          <span class="glyphicon glyphicon-print">&nbsp;Print</span>
+
+
+        </a>
+        <span class="pull-right" >
+        How to Read <label class="switch" >
+  <input type="checkbox" >
+  <div class="slider round"></div>
+</label>
+</span>
+
+
+
+
+
+
+
+        <div class="modal-bodyreceipt">
+            <B><h3 align="right" style="font-size: 25px"> EARNINGS STATEMENTS</h3></B>
+
+           <div class="container-fluid">
+
+            <div class="row">
+        <div style="overflow: hidden">
+            <div class="imgAbt" style="float:left">
+                    <img src="images/people.jpg" style="width:150px;height:60px;margin-left:15px;margin-top:10px"/>
+            </div>
+            <div style="float: left;margin-left: 20px ">
+
+                  <p class="para" style="margin-left: 20px">hiDOF,Inc.<br/>
+                   160 south Linden Ave <br/>  Soute 205 <br>
+                                                south San Fransico,CA 94080
+                </p>
+                <!--<h4><p style="margin-right:-20px">&nbsp;&nbsp;&nbsp;&nbsp;</p></h4>-->
+               <!--<p style="margin-top: -13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>-->
+                <!--<p style="margin-top: -13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>-->
+                <!--<p style="margin-top: -13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>-->
+
+                       </div>
+            <div  id="raj" style="float:right">
+                   <span class="pull-left">
+                <p style="margin-top: 5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check No.:12770134</p>
+                <p style="margin-top: -13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Est.Check Date:12/13/2013 </p>
+                <p style="margin-top: -13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Earning  Period:12/01/2013-12/15/2013 </p>
+                           </span>  </div>
+
+         </div>
+                <hr style="border:1px solid dimgrey">
+                <div style="overflow:hidden">
+                <span class="pull-left">
+
+
+
+
+                  </span>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+
+
+          <div class="modal-footer">
+
+
+
+              <div class="container-fluid">
+
+            <div class="row">
+        <div class="col-sm-3">
+
+
+            <div style="overflow: hidden">
+                <div  style="float: left;margin-left: 5px;">
+                    <p style="font-size: 15px;font-weight: bold;margin-top:5px">&nbsp;Wim Meeussen</p>
+                    <p style="margin-top:-13px">&nbsp;475 Sapphire </p>
+                    <p style="margin-top:-20px">&nbsp;Redwood City,CA 94062 </p>
+                </div>
+                <div id="raj1" style="float:left;margin-left: 50px">
+                    <p style="margin-top:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employee ID:00001352052</p>
+                    <p style="margin-top:-13px">Location:hiDOF,Inc.-HQ </p>
+                    <p style="margin-top:-20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Business Title : CTO, Founder</p>
+                </div>
+                <div  style="float:left;margin-top:15px;margin-left: 75px">
+                    <p style="margin-top:5px;margin-left:30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department : Management</p>
+                    <p style="margin-top:-13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pay Rate:$100,000.00 Annual </p>
+                </div>
+                <div  style="float:right;margin-top:10px;margin-right: 3px">
+                   <button type="button" class="btn2" value="NON-NEGOTIABLE" style="margin-top:-30px;background-color:orange;color:white">NON-NEGOTIABLE</button>
+                    <b> <p style="margin-top:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net Pay</p>
+                    <h4><p style="margin-top:-13px">$2,392.03 </p></h4></b>
+                </div>
+            </div>
+         </div>
+            </div>
+            </div>
+
+             <div>
+                <table width="50%" id="table2">
+                  <tr>
+                      <th colspan="6" style="padding:5px"><h4 style="color:white;background-color: steelblue">&nbsp;&nbsp;&nbsp;&nbsp;Hours & Earnings</h4> </th>
+                  </tr>
+                    <tr>
+                        <th>Description </th>
+                        <th>Rate </th>
+                        <th>Hours </th>
+                        <th>Current Earnings </th>
+                        <th>Hours </th>
+                        <th>Year To Date Earnings </th>
+                    </tr>
+                    <tr>
+                        <td>Regular</td>
+                          <td></td>
+                        <td></td>
+                        <td>3,782.05</td>
+                        <td>840.00</td>
+                        <td>40,512.84</td>
+                    </tr>
+                    <tr>
+                        <td>Holiday</td>
+
+                      <td>48,076</td>
+                    <td>80</td>
+                    <td>384.62</td>
+                    <td>24.00</td>
+                    <td>1,153.86</td>
+
+                      </tr>
+                <tr>  <td>Admin Pay</td>
+
+                      <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                    <td></td>
+                    <td>502.00</td>
+
+                      </tr>
+
+                      <tr>  <td>Bus.Expense Reimb Nontaxable</td>
+
+                      <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                    <td></td>
+                    <td>1,262.11</td>
+
+                      </tr>
+
+                      <tr>  <td><b>Gross Pay<br>FED Taxable Gross</b></td>
+
+                      <td></td>
+                      <td></td>
+                    <td><b>4,166.67<br> 3,424.23</b></td>
+
+                    <td><b>864.00</b></td>
+                    <td><b>43,430.81<br>29,147.32</b></td>
+
+                      </tr>
+                    </table>
+
+
+
+                       <span  class="pull-right">
+                  <div style="float:left;margin-top:-280px;margin-right:49px;">
+              <table class="table3">
+                  <th style="text-align:center;width:100px;margin-top:500px;margin-right:-100px;border-collapse: collapse;
+    border: 1px solid black;margin-right:30px;">TAX INFORMATION</th>
+                      </table>
+                  </div>  </span>
+                 <span class="pull-right">
+                <div style="float:left;margin-top:-235px;margin-right:133px;margin-right:49px;">
+                  <table id="table5" style="border: 1px solid black;">
+
+                <tr><th>Description </th>
+                <th>Federal </th>
+                <th>CA State</th>
+                 </tr>
+
+                <tr>  <td>Marital Status</td>
+
+                      <td> Married</td>
+                    <td>S/M-2 inc</td>
+
+                      </tr>
+
+                      <tr>  <td>Allowances</td>
+
+                      <td>o</td>
+                    <td>o+</td>
+
+
+                      </tr>
+
+                      <tr>  <td>Addl. Pct</td>
+
+                      <td></td>
+                    <td></td>
+
+                      </tr>
+
+                      <tr>  <td>Addl.Amt</td>
+
+                      <td>0.00</td>
+                    <td></td>
+
+                      </tr>
+                         </table>
+                      </div>
+
+                        </span>
+
+                     <span  class="pull-right">
+                  <div style="float:left;margin-top:-60px;margin-right:49px;">
+              <table id="table3">
+                  <th style="text-align:center;width:100px;margin-top:500px;margin-right:-100px;border-collapse: collapse;
+    border: 1px solid black;margin-right:30px;">EMPlOYER PAID BENIFITS</th>
+                      </table>
+                  </div>  </span>
+                 <span class="pull-right">
+                <div style="float:left;margin-top:-16px;margin-right:150px;margin-right:49px;">
+                  <table class="table5" style="border: 1px solid black;">
+
+                <tr><th>Description </th>
+                <th>Current</th>
+                <th>Year To Date</th>
+                 </tr>
+
+                <tr>  <td>Marital Status</td>
+
+                      <td> Married</td>
+                    <td>S/M-2 inc</td>
+
+                      </tr>
+
+                      <tr>  <td>Allowances</td>
+
+                      <td>o</td>
+                    <td>o+</td>
+
+
+                      </tr>
+
+                      <tr>  <td>Addl. Pct</td>
+
+                      <td></td>
+                    <td></td>
+
+                      </tr>
+
+                      <tr>  <td>Addl.Amt</td>
+
+                      <td>0.00</td>
+                    <td></td>
+
+                      </tr>
+                         </table>
+                      </div>
+
+                        </span>
+
+                            </div>
+              </div>
+
+              <br>
+
+              <div>
+              <table id="table4">
+
+                  <tr>  <th colspan="4" style="background-color: steelblue;color:white">&nbsp;&nbsp;&nbsp;&nbsp;Taxes & Deductions</h4></th></tr>
+
+                <tr><th><b>Taxes</b> </th>
+                <th><b>Current</b></th>
+                <th><b>Year to Date</b> </th>
+                 </tr>
+                <tr>  <td>Fed Withholding</td>
+
+                      <td>423,01</td>
+                    <td>4,478.91</td>
+
+                      </tr>
+
+                      <tr>  <td>Fed MED/EE</td>
+
+                      <td>60.52</td>
+                    <td>6.9.61</td>
+
+                      </tr>
+
+                      <tr>  <td>Fed OASDI/EE</td>
+
+                      <td>528.80</td>
+                    <td>2,606.62</td>
+
+                      </tr>
+
+                      <tr>  <td>CA Withholding</td>
+
+                      <td>238.98</td>
+                    <td>1,937.66</td>
+
+                      </tr>
+
+
+                      <tr>  <td>CA OASDI/EE</td>
+
+                      <td>43.33</td>
+                    <td>436.66</td>
+
+                      </tr>
+
+                      <tr>  <td><b>Total Taxes<br></b></td>
+
+
+                    <td><b>1,024.64<br></b></td>
+
+                    <td><b>10,069.13</b></td>
+
+                      </tr>
+
+                     </table>
+                  <br/>
+                     <table style="width:52%;border: 1px solid black;text-align:left" id="table6">
+                      <tr><th><b>Before Tax Deductions</b> </th>
+                <th><b>Current</b></th>
+                <th><b>PLNTD</b> </th>
+                <th><b>Year to Date</b> </th>
+                 </tr>
+
+                    <tr>  <td>401K/Roth Combination</td>
+
+                      <td>750.00</td>
+                    <td>0.00</td>
+                        <td>12,894.98</td>
+
+                      </tr>
+
+                      <tr>  <td>Wage Works Pretax Transit</td>
+
+                      <td>0.00</td>
+                    <td>0.00</td>
+                        <td>202.00</td>
+
+                      </tr>
+
+                    </table>
+              </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+         </td>
+        </tr>
+        </tbody>
+    </table>
+
+     </span></div>
+
+
+
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+
+
+        <!--</div>-->
+        <!--<p>Earning statement ends</p>-->
+    </div>
+
+        <button class="accordion" ng-init="init()" ng-click="warning()">Payroll Estimates</button>
+        <div class="panel">
+            <div class="row" ng-repeat="x in values1.payroll">
+                <div  class="col-sm-4" id="row1">
+
+                    <div class="menu">
+                        <p class="menu-heading">{{x.pheading1}}</p>
+                        <p class="describe">{{x.value1}}</p>
+                    </div>
+                    <div class="menu">
+                        <p class="menu-heading">{{x.pheading2}}</p>
+                        <p class="describe">{{x.value2}}</p>
+                    </div>
+                </div>
+                <div  class="col-sm-4" id="row2">
+                    <div class="menu">
+                        <p class="menu-heading">{{x.pheading3}}</p>
+                        <p class="describe">{{x.value3}}</p>
+                    </div>
+                    <div class="menu">
+                        <p class="menu-heading">{{x.pheading4}}</p>
+                        <p class="describe">{{x.value4}}</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+        </div>
+
+    
+    <button class="accordion">Tax Withholding</button>
+    <div class="panel">
+        <div class="row" id="tax">
+            <div><button>EDIT</button></div>
+            <div class="col-sm-4" id="tax1"  ng-repeat="x1 in values1.tax_fedral">
+                <div class="tax_heading"><span><h2>{{x1.headings1}}</h2></span><span><p>{{x1.headings2}}</p></span></div>
+                <div class="allow"><p>{{x1.headings3}}</p><p class="allowance">{{x1.value}}</p></div>
+                <div class="tax_table">
+                    <p>{{x1.add_head}}:{{x1.value1}}</p>
+                    <p>{{x1.add_head1}}:{{x1.value2}}</p>
+                    <p>{{x1.add_head2}}:{{x1.value3}}</p>
+                </div>
+            </div>
+            <div class="col-sm-4" id="tax2" ng-repeat="x2 in values1.tax_NYF">
+
+                <div class="tax_heading"><span><h2>{{x2.headings1}}</h2></span><span><p>{{x2.headings2}}</p></span></div>
+                <div class="allow"><p >{{x2.headings3}}</p><p class="allowance">{{x2.value}}</p></div>
+                <div class="tax_table">
+                    <p>{{x2.add_head}}:{{x2.value1}}</p>
+                    <p>{{x2.add_head1}}:{{x2.value2}}</p>
+                    <p>{{x2.add_head2}}:{{x2.value3}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button class="accordion">Retirement Plan Enrollment</button>
+    <div class="panel">
+        <div class="retirement">
+            <p>Not Enrollerd in Retirement Plan</p>
+            <div><button id="myBtn_ret" onclick="display()">Enroll</button></div>
+        </div>
+    </div>
+   <!--sdhjsd-->
+    <div id="myModalret" class="modalret">
+
+        <div class="modal-contentret"  tabindex="-1">
+            <span>Retirement Plan Election</span><span class="closeret">&times;</span>
+            <div class="heading_name" ng-repeat="x in values1.retirement_details">
+                <p>{{x.heading1}}:{{x.name}}</p>
+            </div>
+            <div id="plan" ng-repeat="x in values1.retirement_details">
+                <label>Effective Date</label>
+                <div class="datepickerdemo" ng-cloak>
+                    <md-datepicker ng-model="date" md-placeholder="Enter date"></md-datepicker>
+                </div>
+                <p>Plan {{x.plan}}</p>
+
+            </div>
+            <h2>Setup Payroll Deductions</h2>
+            <div class="payroll">
+                <div class="form_pay">
+                    <p>WithHeld from each check issued</p>
+                    <div>
+                        <form name="myForm">
+                            <div><input type="radio"  value="one"  name="check1" ng-checked="check1" ng-click="pass($event)"><label>Float Dollar Amount</label> as of <input type="text" ng-model="one" ng-disabled="checker1">Per check Issued</div>
+                            <div><input type="radio"  value="two"  name="check2" ng-checked="check2" ng-click="pass($event)"><label>Percentage of Gross Wages</label><input type="text" ng-model="two"  ng-disabled="checker2">% per check Issued</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <h2>Setup Contribution Goal Amount</h2>
+            <div class="payroll">
+                <div class="form_pay">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt ac elit nec molestie. Nullam non dignissim neque.</p>
+                    <div>
+                        <form name="myForm">
+                            <div><input type="radio" value="three" name="check3" ng-checked="check3" ng-click="pass1($event)"><label>Set a Goal Amount</label> as of $<input type="text" ng-model="three" ng-disabled="checker3" >Per check Issued</div>
+                            <div><input type="radio" value="four"  name="check4" ng-checked="check4" ng-click="pass1($event)"><label>Use Limited Amount Calculator</label></div>
+                            <div>
+                                <p ng-init="amount=18000">Federal Amount Allowed:$18,000.00</p>
+                                <p>Prior Contributions:-$<input type="text" ng-model="prior" ng-disabled="checker4" ng-blur="calc()"></p>
+                                <p>Current Year Maximum Contributions{{prior1}}</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>Agreemet</h3>
+                <p>Upon penalty of perjury, I represent that I have been authorized by the employee aﬀected hereby to make and/or implement the election(s) or change(s) set forth above, and that I am otherwise authorized by my Company to do so.</p>
+                <input type="checkbox" name="argree" ng-model="agree" ng-click="retire_reg($event)" checked="agree">I Agree
+            </div>
+            <div class="form_pay">
+                <button ng-disabled="register" id="enr" ng-click="enroll()" >Enroll</button>
+                <button  id="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3 style="color:white">Create a New Payment</h3>
+                </div>
+                <br/>
+
+                <div class="modal-body">
+                    <form name="saveform" style="display: inline-block" ng-submit="newpay(emp)">
+                        <table border="0" style="border-collapse: separate;text-align: right;border-spacing:1em;;color:#777777">
+                            <tr>
+                                <td> PayTo:</td>
+                                <td style="font-weight: bold;text-align:left">{{name}}Jennifer M. Blaire (EMP ID: 0000122158)</td>
+                            </tr>
+                            <tr>
+                                <td><sup style="color: red">*</sup>Begin Date :</td>
+                                <td style="text-align:left">
+                                    <div class="datepickerdemo" layout="column" ng-cloak required>
+                                        <md-datepicker
+                                                ng-model="emp.begindate"
+                                                md-placeholder="Enter date" >
+                                        </md-datepicker>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>End Date :</td>
+                                <td style="text-align:left">
+                                    <div class="datepickerdemo" layout="column" ng-cloak>
+                                        <md-datepicker
+                                                ng-model="emp.enddate"
+                                                md-placeholder="Enter date">
+                                        </md-datepicker>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Goal Amount :</td>
+                                <td style="text-align:left"><input type="number" ng-model="goalamount"/></td>
+                            </tr>
+                            <tr>
+                                <td><sup style="color: red">*</sup>Earn Type :</td>
+                                <td style="text-align: left">
+                                    <input list="earntype" placeholder="select earn type" ng-model="emp.earntype" required />
+                                    <datalist id="earntype">
+                                        <option value="Commission"></option>
+                                        <option value="Additional Allowance"></option>
+                                        <option value="Car Allowance"></option>
+                                    </datalist>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <sup style="color: red">*</sup>
+                                    Earn Amount :<sub style="display: flex">(selected per pay frequency)</sub>
+                                </td>
+                                <td style="text-align:left"><input type="number" ng-model="emp.earnamount" required /></td>
+                            </tr>
+                            <tr>
+                                <td><sup style="color: red">*</sup>Payment Frequency :</td>
+                                <td style="text-align: left">
+                                    <input list="payfreq" placeholder="select payment frequency" ng-model="emp.payfrequency"  required />
+                                    <datalist id="payfreq">
+                                        <option value="Every Payroll"></option>
+                                        <option value="1st & 2nd Payrolls of Month"></option>
+                                        <option value="2nd Payroll of Month"></option>
+                                    </datalist>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <div style="float:right">
+                            <button type="submit" id="sub"   ng-disabled="saveform.$invalid" >Save</button>
+                            <button type="reset" style="background-color: darkgrey;border:none;color:white;height:30px;width:auto">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <br/>
+            </div>
+        </div>
+
+        <div id="myModal1" class="modal1">
+            <div class="modal-content1">
+                <span class="close1">&times;</span>
+                <p style="fill: green">  &#9989; You have sucessfully created a new recurring payment.</p>
+            </div>
+        </div>
+        <div id="endpaysucess" class="modal1">
+            <div class="modal-content1">
+                <span class="endclose">&times;</span>
+                <p style="fill: green">  &#9989; You have sucessfully submitted your End payment.</p>
+            </div>
+        </div>
+
+        <div id="endpay" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close4">&times;</span>
+                    <h3 style="color:white">End Payment</h3>
+                </div>
+                <br/>
+
+                <div class="modal-body">
+                    <form style="display: inline-block" ng-submit="endpayment(emp1,$index,rowno)">
+                        <table border="0" style="border-collapse: separate;text-align: right;border-spacing:1em;;color:#777777">
+                            <tr>
+                                <td> PayTo:</td>
+                                <td style="font-weight: bold;text-align:left">{{name}}Jennifer M. Blaire (EMP ID: 0000122158)</td>
+                            </tr>
+                            <tr>
+                                <td>Begin Date :</td>
+                                <td style="text-align:left">{{emp1.begindate}}</td>
+                            </tr>
+                            <tr>
+                                <td>End Date :</td>
+                                <td style="text-align:left">
+                                    <div class="datepickerdemo" layout="column" ng-cloak>
+                                        <md-datepicker
+                                                ng-model="enddate"
+                                                md-placeholder="Enter date">
+                                        </md-datepicker>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Goal Amount :</td>
+                                <td style="text-align:left">{{emp1.goalAmount}}</td>
+                            </tr>
+                            <tr>
+                                <td>Earn Type :</td>
+                                <td style="text-align: left">{{emp1.earntype}}</td>
+                            </tr>
+                            <tr>
+                                <td> Earn Amount :<sub style="display: flex">(selected per pay frequency)</sub>
+                                </td>
+                                <td style="text-align:left">{{emp1.earnamount}}</td>
+                            </tr>
+                            <tr>
+                                <td>Payment Frequency :</td>
+                                <td style="text-align: left"> {{emp1.payfrequency}}</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <div style="float:right">
+                            <input type="submit" id="sub1"  value="Submit" style="border:none;background-color:orangered;color:white;height:30px;width:auto" />
+                            <input type="reset" value="Cancel" style="background-color: darkgrey;border:none;color:white;height:30px;width:auto" />
+                        </div>
+                    </form>
+                </div>
+                <br/>
+            </div>
+        </div>
+
+        <!--hdjsd-->
+
+        <!--dhfd-->
+
+        <div id="myModal2" class="modal2" >
+            <div class="modal-content2">
+                <div style="background-color:whitesmoke;">
+                    <span class="close2">&times;</span>
+                    <p style="color:steelblue;font-weight: bold"> Transcation Details  </p>
+                    <hr color="steelblue">
+                    <table style="border-collapse: separate;border-spacing: 0.5em" id="transtable">
+                        <tr>
+                            <td style="text-align: right" >Date submitted:&nbsp;</td>
+                            <td>{{datesubmitted}}</td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right" > Company:&nbsp; </td>
+                            <td>{{company}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Submitted By:&nbsp; </td>
+                            <td>{{submittedby}}</td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right" >PF Client:&nbsp; </td>
+                            <td>{{PFClient}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Subject:&nbsp; </td>
+                            <td>{{subject}}</td>
+                            <br/>
+                        </tr>
+                        <br/>
+
+                        <tr>
+                            <td style="text-align: right" >Action:&nbsp;</td>
+                            <td>{{action}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Goal Amount:&nbsp;</td>
+                            <td>{{goalAmount}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Earn Type:&nbsp;</td>
+                            <td>{{earntype}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Earn Amount:&nbsp;</td>
+                            <td>{{earnamount}}</td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right" >Begin Date:&nbsp;</td>
+                            <td>{{begindate}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Payment Frequency:&nbsp;</td>
+                            <td>{{payfrequency}}</td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right" >End Date:&nbsp;</td>
+                            <td>{{enddate}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--click end pay-->
+        <div id="clickend" class="modal2" >
+            <div class="modal-content2">
+                <div style="background-color:whitesmoke;">
+                    <span class="closeend">&times;</span>
+                    <p style="color:steelblue;font-weight: bold"> Transcation Details  </p>
+                    <hr color="steelblue">
+                    <table style="border-collapse: separate;border-spacing: 0.5em" >
+                        <tr>
+                            <td style="text-align: right" >Date submitted:&nbsp;</td>
+                            <td>{{datesubmitted}}</td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right" > Company:&nbsp; </td>
+                            <td>{{company}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Submitted By:&nbsp; </td>
+                            <td>{{submittedby}}</td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right" >PF Client:&nbsp; </td>
+                            <td>{{PFClient}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Subject:&nbsp; </td>
+                            <td>{{subject}}</td>
+                            <br/>
+                        </tr>
+                        <br/>
+
+                        <tr>
+                            <td style="text-align: right" >Action:&nbsp;</td>
+                            <td>{{action}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Goal Amount:&nbsp;</td>
+                            <td>{{goalAmount}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Earn Type:&nbsp;</td>
+                            <td>{{emp2.earntype}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Earn Amount:&nbsp;</td>
+                            <td>{{emp2.earnamount}}</td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right" >Begin Date:&nbsp;</td>
+                            <td>{{emp2.begindate}}</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right" >Payment Frequency:&nbsp;</td>
+                            <td>{{emp2.payfrequency}}</td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right" >End Date:&nbsp;</td>
+                            <td>{{emp2.enddate}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button type="submit" style="color:white;background-color: dimgrey" ng-click="onChange(rowno,emp2)">End Payment</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="warning" ng-show="error">The forms listed on Payroll Estimates are designed to provide general guidance and estimates. They should not be relied upon to calculate exact taxes, payroll or other financial data. These estimates are not intended to provide tax or financial advice. You should consult a professional advisor or accountant regarding any specific requirements or concerns.
+        <div><button ng-click="ok()" ng-show="display_message=true">OK</button></div>
+    </div>
+    <div class="success" ng-repeat="x in values1.retirement_details" ng-show="success">This employee has sucessfully enrolled in {{x.plan}}<button type="button" class="closeret" ng-click="close()">&times;</button>
+    </div>
+</div>
+    <script src="javascript/manageempjs.js"></script>
+</div>
+</body>
+</html>

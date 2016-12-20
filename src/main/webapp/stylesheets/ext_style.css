@@ -1,0 +1,378 @@
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+.accordion-heading{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 15px;
+    width: 60%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+    margin-left:200px;
+    font-weight: bolder;
+    margin-top:10px;
+}
+.accordion-inner{
+    width:55%;
+    margin-left:220px;
+    background-color: white;
+}
+.menu{
+    background: #f2f3f4;
+    width:500px;
+    height:100px;
+    float:left;
+    margin:5px;
+}
+.menu-heading{
+    font-size:20px;
+    margin: 5px;
+    color:#3a5b91;
+    font-family: helvatica;
+    font-weight: bold;
+}
+.describe{
+    margin: 10px;
+}
+#row2{
+    /*margin-left:160px;*/
+    float:right;
+    margin-right: 2%;
+}
+#row1 {
+    float:left;
+    margin-left: 2%;
+}
+
+.warning {
+    left:600px;
+    top:0;
+    position: fixed;
+    width:500px;
+    height:180px;
+    background-color: #FEEFB3;
+    background-image: url('warning.png');
+    border: 1px solid orange;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+
+}
+.success {
+    left:600px;
+    top:0;
+    position: fixed;
+    width:350px;
+    height:80px;
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-repeat: no-repeat;
+    padding:15px 10px 15px 50px;
+    margin: 10px 0px;
+    background-image:url('success.png');
+}
+.warning button{
+    background-color: #9f9999;
+    width:90px;
+    height:30px;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    float:right;
+}
+#tax button{
+    float: right;
+    width:80px;
+    height: 40px;
+    background-color:coral;
+    margin-bottom: 10px;
+    color:white;
+    font-weight: bold;
+    font-size:15px;
+
+}
+#tax1{
+    width:500px;
+    border-top:solid 2px black;
+
+
+}
+#tax2{
+    border-top:solid 2px black;
+    width: 500px;
+    float:right;
+
+}
+.tax_heading{
+    border-bottom: solid 1px black;
+}
+.allowance{
+
+    font-size:150px;
+    font-weight: bolder;
+    font-family:sans-serif;
+    text-align: center;
+    color:#ddd7d7;
+}
+.allow{
+    border-bottom: solid 1px black;
+}
+.tax_heading p{
+    float:right;
+    position: relative;
+    top:-40px;
+    font-size:15px;
+    font-weight: 300;
+    color:coral;
+}
+.tax_table p{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+.retirement{
+    border:solid 2px #ddd7d7;
+    margin-left:50px;
+}
+.retirement p{
+    font-size:50px;
+    font-weight: bold;
+    font-family:sans-serif;
+    text-align: center;
+    color:#ddd7d7;
+
+}
+.retirement button{
+    width:80px;
+    height: 40px;
+    text-decoration: none;
+    background-color:coral;
+    margin-bottom: 20px;
+    color:white;
+    font-weight: bold;
+    font-size:15px;
+    margin-left:450px;
+
+}
+
+.modalret {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-contentret {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    overflow-y: auto;
+    max-height: calc(100vh - 210px);
+    width: 80%;
+}
+
+/* The Close Button */
+.closeret {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeret:hover,
+.closeret:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.heading{
+    background-color:#2d579b;
+
+}
+.container{
+    background-color: white;
+    border: solid white 1px;
+    outline:solid white 2px;
+    margin-top:30px;
+
+}
+.heading span{
+    font-size:30px;
+    font-weight: 300;
+    font-family: sans-serif;
+    color:white;
+}
+.modal-content div{
+    font-size: 15px;
+    font-family:sans-serif;
+    font-weight: 300;
+}
+.heading_name{
+    font-size:15px;
+    font-family: sans-serif;
+    margin-left:100px;
+
+}
+#plan{
+    background-color:#edecec;
+    padding:10px;
+
+}
+.payroll{
+    border-top:solid black 1px;
+    background-color:#edecec;
+    margin-top:20px;
+    /*  margin-left:40px;*/
+    padding:10px;
+
+
+}
+.form_pay{
+    background-color:white;
+    padding:30px;
+}
+.form_pay div{
+    background-color:#edecec;
+    padding:10px;
+    margin-top:10px;
+}
+.form_pay p{
+    font-family: sans-serif;
+    font-size:20px;
+}
+.form_pay input {
+    width:50px;
+}
+form label{
+    font-family: sans-serif;
+    font-size:20px;
+}
+input[type=radio]{
+    transform: scale(2.0);
+    color:aqua;
+}
+
+
+
+#enr:enabled {
+    background-color: orangered;
+    border:none;
+    color:white;
+    height:30px;
+    width:auto;
+}
+#enr:disabled {
+    background-color:lightgray;
+    border:none;
+    color:white;
+    height:30px;
+    width:auto;
+}
+/*@media  screen and (min-width: 1800px) {
+    .menu{
+        width:500px;
+        height:100px;
+
+    }
+
+    .success{
+        left:600px;
+    }
+    .warning{
+        left:600px;
+    }
+    #tax1{
+        margin-top:40px;
+        width:400px;
+    }
+    #tax2{
+        margin-top:30px;
+        width:400px;
+    }
+
+}*/
+@media  screen and (min-width: 1200px) {
+    .menu{
+        width:350px;
+        height:120px;
+
+    }
+    #row2{
+        /*margin-left:160px;*/
+        float:left;
+
+    }
+    .success{
+        left:300px;
+    }
+    .warning{
+        left:300px;
+    }
+    #tax1{
+        margin-top:20px;
+        width:300px;
+    }
+    #tax2{
+        margin-top:30px;
+        width:300px;
+    }
+
+}
+@media  screen and (min-width: 1000px) {
+    .menu{
+        width:250px;
+        height:170px;
+        margin-left:0px;
+    }
+
+    .success{
+        left:300px;
+    }
+    .warning{
+        left:300px;
+    }
+    #tax1{
+        margin-top:40px;
+        width:220px;
+    }
+    #tax2{
+        margin-top:30px;
+        width:200px;
+    }
+
+}
+@media  screen and (min-width: 1600px) {
+    .menu{
+        width:450px;
+        height:100px;
+
+    }
+    #row2{
+        margin-left:120px;
+    }
+    .success{
+        left:600px;
+    }
+    .warning{
+        left:600px;
+    }
+    #tax1{
+        margin-top:40px;
+        width:400px;
+    }
+    #tax2{
+        margin-top:30px;
+        width:400px;
+    }
+
+}

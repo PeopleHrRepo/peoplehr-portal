@@ -1,0 +1,88 @@
+{
+  "statement":[
+    {
+      "CheckNo":"12770134",
+      "PayEndDate":"06/15/2015",
+      "PayDate":"06/17/2015",
+      "NetPay":"$2,368.32"
+
+    },
+    {
+      "CheckNo":"12770134",
+      "PayEndDate":"06/15/2016",
+      "PayDate":"06/17/2016",
+      "NetPay":"$2,368.32"
+
+    },
+    {
+      "CheckNo":"12650111",
+      "PayEndDate":"05/31/2015",
+      "PayDate":"06/03/2015",
+      "NetPay":"$2,114.84"
+
+    },
+    {
+      "CheckNo":"26433651",
+      "PayEndDate":"05/15/2015",
+      "PayDate":"05/18/2015",
+      "NetPay":"$2,369.65"
+    },
+    {
+      "CheckNo":"12335800",
+      "PayEndDate":"04/30/2015",
+      "PayDate":"05/02/2015",
+      "NetPay":"$2,379.42"
+    },
+    {
+      "CheckNo":"29142940",
+      "PayEndDate":"04/15/2015",
+      "PayDate":"04/17/2015",
+      "NetPay":"$2,369.65"
+    },
+    {
+      "CheckNo":"12771141",
+      "PayEndDate":"06/15/2013",
+      "PayDate":"06/17/2013",
+      "NetPay":"$3,368.32"
+
+    },
+    {
+      "CheckNo":"11571141",
+      "PayEndDate":"06/10/2013",
+      "PayDate":"06/19/2013",
+      "NetPay":"$4,268.32"
+
+    },
+    {
+      "CheckNo":"32568126",
+      "PayEndDate":"03/31/2015",
+      "PayDate":"04/03/2015",
+      "NetPay":"$2,379.42"
+    },
+    {
+      "CheckNo":"02136548",
+      "PayEndDate":"03/15/2015",
+      "PayDate":"03/18/2015",
+      "NetPay":"$2,369.65"
+    },
+    {
+      "CheckNo":"44536920",
+      "PayEndDate":"02/28/2015",
+      "PayDate":"03/02/2015",
+      "NetPay":"$2,379.42"
+    },
+    {
+      "CheckNo":"01369852",
+      "PayEndDate":"02/15/2015",
+      "PayDate":"02/18/2015",
+      "NetPay":"$2,369.65"
+    },
+    {
+      "CheckNo":"00125895",
+      "PayEndDate":"01/31/2015",
+      "PayDate":"02/02/2015",
+      "NetPay":"$2,379.42"
+    }
+  ]
+  
+}
