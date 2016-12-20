@@ -302,7 +302,7 @@ input[type=radio]{
     } 
 
 } */
-@media  screen and (min-width: 1000px) {
+/* @media  screen and (max-width: 1000px) {
     .menu{
         width:350px;
         height:140px;
@@ -324,11 +324,11 @@ input[type=radio]{
         width:300px;
     } 
 
-}
-@media screen and (min-width:1300px){
+} */
+@media screen and (min-width:1200px){
 	 .menu{
-        width:450px;
-        height:100px;
+        width:350px;
+        height:140px;
 	
     }
     #row1{
@@ -345,11 +345,11 @@ input[type=radio]{
     .warning{
         left:400px;
     }
-}
+} 
 @media  screen and (min-width: 1600px) {
     .menu{
         width:500px;
-        height:100px;
+        height:140px;
 	
     }
     #row1{
@@ -369,3 +369,47 @@ input[type=radio]{
   
 
 }
+@media  screen and (max-width: 900px) {
+    .menu{
+        width:280px;
+        height:140px;
+	
+    }
+    #row1{
+    	margin-left:100px;
+    	
+    }
+    #row2{
+        margin-left:100px;
+        
+    }
+    .success{
+        left:400px;
+    }
+    .warning{
+        left:400px;
+    }
+  
+
+}
+@media screen and (max-width:1200px){
+	 .menu{
+        width:280px;
+        height:140px;
+	
+    }
+    #row1{
+    	margin-left:100px;
+    	
+    }
+    #row2{
+        margin-left:100px;
+        
+    }
+    .success{
+        left:200px;
+    }
+    .warning{
+        left:200px;
+    }
+} 
