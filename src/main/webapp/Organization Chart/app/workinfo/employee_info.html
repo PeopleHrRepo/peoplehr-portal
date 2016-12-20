@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="workinfo">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+        <srcipt src="bootstrap-3.3.7-dist/js/bootstrap.js"></srcipt>
+        <script src="bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+        <script src="angular.js"></script>
+        <script src="workinfo.js"></script>
+        <style>
+            .navbar {
+                position: relative;
+                min-height: 44px;
+                margin-bottom: 20px;
+                border: 1px solid transparent;
+            }
+            #logo1{
+                height:40px;
+                width:180px;
+                margin-left:38px;
+            }
+            #logo2{
+                height:30px;
+                width:30px;
+                margin-top:10px;
+                margin-right:15px;
+                
+            }
+            #border{
+                
+               
+                border:5px solid lightgrey;
+                margin-top: -20px;
+                margin-left: 70px;
+                margin-right:0px;
+                margin-bottom: auto;
+            }
+           
+            #manage1{
+                margin-top:-3px;
+                
+            }
+             #manage{
+                 
+                font-size:11px;
+                color:orange;
+                text-decoration: none;
+            }
+            #tab1,#tab2{
+                font-size: 12px;
+                color:darkgray;
+                text-decoration:none;
+            }
+            #tab1:hover,#tab2:hover{
+                color:blue;
+                
+                text-decoration: overline;
+            }
+            #profilepic{
+                margin-top:5px;
+                padding:6px;
+                float:left;
+                border-radius: 50%;
+                height:100px;
+                width:100px;
+            }
+            
+            p{
+                font-size: 11px;
+                color:grey;
+                padding:0px;
+                margin:0px;
+            }
+            h4{
+                padding-top:15px;
+                font-size: 20px;
+            }
+            #view{
+                float:right;
+                margin-top:-33px;
+            }
+            #btn2{
+                float:right;
+                margin-top:-25px;
+            }
+            .btn1{
+                background-color:dimgrey;
+                color:white;
+            }
+             ul {
+                list-style-type: none;
+                
+                padding: 5px;
+                display: inline-block;
+                overflow: hidden;
+                
+            }
+
+            li {
+                padding:0px;
+                margin-left: 5px;
+                margin-right:5px;
+            }
+
+            li a {
+                font-weight:10px;
+                font-size: 15px;
+                display:inline-block;
+                color: dimgray;
+                text-align: center;
+                padding: 0px 35px;
+                
+            }
+
+            li a:hover {
+                color:darkblue;
+                text-decoration:underline 2px; 
+            }
+            hr{
+                
+                border-color:dimgray;
+                margin-right:5px;
+                margin-left: 5px;
+                border-width: 1px;
+                margin-top: -23px;
+            }
+            
+            
+            #wrapper,#wrapper3,#wrapper4,#wrapper5{
+                width:92%;
+                height:100px;
+                clear:both;
+                display:block;
+                background-color: aliceblue;
+                font-size: 15px;
+            }
+            #first{
+                margin-top: 25px;
+                margin-left: 13px;
+                margin-right: 7px;
+                margin-bottom: 25px;
+                display:block;
+                background-color:white;
+                width:545px;
+                height:50px;
+                float:left;
+                text-align:center;
+            }
+            #second {
+                margin-top: 5px;
+                margin-left: 7px;
+                margin-right: 3px;
+                margin-bottom: 25px;
+                display:block;
+                background-color:white;
+                width:550px;
+                height:50px;
+                float:right;
+                text-align:left;
+            }
+
+            #wrapper1 {
+                width:1140px;
+                height:120px;
+                clear:both;
+                display:block;
+                background-color: aliceblue;
+                font-size: 15px;
+            }
+
+            #first1 {
+                margin-top: 25px;
+                margin-left: 13px;
+                margin-right: 7px;
+                margin-bottom: 15px;
+                display:block;
+                background-color:white;
+                width:545px;
+                height:70px;
+                float:left;
+                text-align:center;
+            }
+            #second1 {
+                margin-top: 5px;
+                margin-left: 7px;
+                margin-right: 13px;
+                margin-bottom: 15px;
+                display:block;
+                background-color:white;
+                width:550px;
+                height:70px;
+                float:right;
+                text-align:center;
+            }
+            #first1 ul li{
+               
+                list-style-type: none;
+            }
+            #second1 ul li{
+                list-style-type: none;
+            }
+            #wrapper2 {
+                width:1140px;
+                height:120px;
+                clear:both;
+                display:block;
+                background-color:aliceblue;
+                font-size: 15px;
+            }
+
+            #first2 {
+                margin-top: 5px;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 25px;
+                display:block;
+                background-color:white;
+                width:1110px;
+                height:70px;
+                float:left;
+                text-align:left;
+            }
+            #first2 ul li{
+                list-style-type: none;
+            }
+/*
+            #first3 ,#first4{
+                margin-top: 5px;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 20px;
+                display: block;
+                background-color: white;
+                width: 1110px;
+                height: 10px;
+                float: left;
+                text-align: left;
+            }
+*/
+
+            #db,#ms{
+                float:left;
+                margin-left:100px;
+            }
+            #ew,#ds{
+                margin-right:100px;
+                float:right;
+            }
+            #first5{
+                margin-top: 5px;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 25px;
+                display: block;
+                background-color: white;
+                width: 1110px;
+                height: 50px;
+                float: left;
+                text-align: center;
+                font-size:20px;
+                color:lightgrey;
+            }
+            h3{
+                font-size:18px;
+                margin-bottom:3px;
+            }
+            #ed1,#ed3{
+                color:orange;
+                margin-left:-43px;
+            }
+            #de1{
+                color:orange;
+                margin-left:460px;
+            }
+            #ed2{
+                color:orange;
+                margin-left:35px;
+            }
+            #fm{
+                padding:0px;
+                color:orange;
+                margin-left:35px;
+                margin-top:-10px;
+            }
+           #ed4, #ed5,#ed6,#ed7,#ed8{
+              color:orange;
+                float:right;
+                margin-right:17px;
+            }
+            #msg{
+                color:darkgray;
+                width:5px;
+                height:5px;
+                margin:0px;
+                padding:0px;
+            }
+        </style>
+        
+        
+        
+        <style>
+                    .nav-tabs{
+              background-color:white;
+            }
+
+            .nav-tabs > li > a{
+            /*  border-radius: 5px;*/
+            }
+            .nav-tabs > li > a:hover{
+              background-color:cornflowerblue !important;
+            /*    border-radius: 5px;*/
+                color:#fff;
+            /*    border:1px solid black;*/
+            }
+            .nav-tabs > li.active > a,
+            .nav-tabs > li.active > a:focus,
+            .nav-tabs > li.active > a:hover{
+                background-color: cornflowerblue !important;
+                color:#fff;
+            /*    border:2px solid #3F515F;*/
+            }
+        
+   
+        </style>    
+        
+        
+        
+        
+            
+            
+            
+            <style>
+             #wrapper,#wrapper3,#wrapper4,#wrapper5{
+                width:85%;
+                height:115px;
+                clear:both;
+                display:block;
+                background-color: aliceblue;
+                font-size: 15px;
+            }
+             #first3 ,#first4{
+                margin-top: 15px;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 25px;
+                display: block;
+                background-color: white;
+                width: 810px;
+                height: 72px;
+                float: left;
+                text-align: left;
+            }
+            #ed4, #ed5,#ed6,#ed7,#ed8{
+              color:orange;
+                float:right;
+                margin-right:17px;
+            }
+            #db{
+                float:left:
+        
+                
+            }
+            #ew{
+                float:right;
+                margin-top:50px;
+                margin-right:185px;
+            }
+            #ms{
+                margin-top:20px;
+                float:left;
+               
+            }
+            #ds{
+                margin-top:25px;
+                margin-right:112px;
+                float:right;
+            }
+            #main{
+                margin-left: 25px;
+                margin-top:25px;
+            }
+            #btn{
+                float:right;
+                margin-right:60px;
+                color:white; 
+                background: orange;
+            }
+            h4 {font-weight: bold;margin-left: 20px;}
+            
+            #first9 { 
+             margin-top: 15px;
+                margin-left: 15px;
+/*                margin-right: 15px;*/
+                margin-bottom: 45px;
+                display: block;
+                background-color: white;
+                width: 810px;
+                height: 83px;
+                float: left;
+                text-align: left;
+/*              background-color: aliceblue;*/
+            }
+            
+            .mainBox{
+                
+                 min-height:5px;background-color:aliceblue;margin:3px; padding-bottom:15px; border:1px solid black;
+                
+            }
+            
+            
+            .infoBox {
+                background-color:white;margin:2px;text-align:center;padding:10px;
+            }
+            
+            
+            
+        </style>
+        
+    </head>
+    <body ng-controller="workinfoCtrl">
+        <!-- navBar header -->
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <img src="bootstrap-3.3.7-dist/images/people_hr.jpg" id="logo1">
+              </div>
+                <div class="nav navbar-nav navbar-right">
+                <img src="bootstrap-3.3.7-dist/images/AS.png" id="logo2">  
+                </div>
+              
+          </div>
+        </nav>
+        <div class="container-fluid" style="margin-left:3%" id="border">
+            <div id="manage1">
+                <a href="#" id="manage">&lt;Manage Employees</a>
+                <span class="pull-right"><a href="#" id="tab1">ME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="pull-right"><a href="#" id="tab2">COMPANY</a></span></span>
+            </div>
+            <div>
+                
+                <img src="bootstrap-3.3.7-dist/images/Mariana-Gheorghe-CEO-OMV-Petrom.jpg" id="profilepic"/>
+                <h4>Jen Blaire &nbsp;&nbsp;&nbsp;&nbsp;<span class="edit-field glyphicon glyphicon-pencil" style="font-size:15px;"></span></h4> 
+                <div id="view">
+                <span class="glyphicon glyphicon-blackboard"></span>
+                <a href="" ng-click="viewOrganizationChart()">View in Organization Chart</a>
+                </div>
+                <p>Sr.Director</p>
+                <p>Consulting | Belmont,CA &nbsp;<span class="edit-field glyphicon glyphicon-map-marker"></span></p>
+                <div id="btn2">
+                            <span class="pull-right"><button type="button" class="btn1">Request Extended Leave</button>&nbsp;<button type="button" class="btn1">Terminate</button></span>
+                        </div>
+                <p><span class="edit-field glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;jen.blaire@hidof.com &nbsp;&nbsp;<span class="edit-field glyphicon glyphicon-pencil"></span>&nbsp; | &nbsp;<span class="edit-field glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;510.248.3369&nbsp;&nbsp;;<span class="edit-field glyphicon glyphicon-pencil"></span></p>
+                  
+            </div></div>
+        <div class="container">
+    <div class="row">
+            
+            <!--
+            <div>
+                    <ul class="list-inline" >
+                        <li><a href="" ng-click="displayPersonal()">PERSONAL</a></li>
+                            <li><a href="" ng-click="displayWorkInfo()">WORK INFO</a></li>
+                            <li><a href="">MONEY</a></li>
+                            <li><a href="">TIME OFF</a></li>
+                            <li><a href="">BENEFITS</a></li>
+                            <li><a href="">ROLES</a></li>
+                            <li><a href="">E-FORMS</a></li>
+                    </ul>
+                   
+            </div>
+-->
+             <ul class="nav nav-tabs" style="margin-left:20%;">
+                    <li><a data-toggle="tab" href="" ng-click="displayPersonal()">PERSONAL</a></li>
+                    <li><a data-toggle="tab" href="" ng-click="displayWorkInfo()">WORK INFO</a></li>
+                    <li><a data-toggle="tab" href="" ng-click="">MONEY</a></li>
+                    <li><a data-toggle="tab" href="#eforms">BENEFITS</a></li>
+                    <li><a data-toggle="tab" href="#eforms">ROLES</a></li>
+                    <li><a data-toggle="tab" href="#eforms">E-FORMS</a></li>
+                    
+                </ul><br>
+           
+            </div>
+             
+            
+             <div class="myEmp" ng-show="showPersonal">
+            <h4>Names</h4>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainBox">
+                <div>
+                    <a style="margin-left:38%;color:orange" href="">Edit</a>
+                <span><a href="#"  style="color:orange" class="pull-right">Delete</a></span>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="background-color:white;margin:2px;text-align:center;padding:10px;">      
+                
+                    <span>Legal Name: {{employees[1].LegalName}}</span>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 pull-right" style="background-color:white;margin:2px;text-align:center;padding:10px;">      
+                    <span>Preferred Name:{{employees[1].PreferredName}}</span>
+                   <br>
+                </div>
+             </div>    
+                
+            
+            <h4>Contact Methods</h4>
+            <div class="mainBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div>
+                    <a style="margin-left:38%;color:orange" href="">Edit</a>
+                <span><a href="#"  style="color:orange" class="pull-right">Edit</a></span>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 infoBox">
+                  <ul class="list-unstyled"> 
+                      <li>Work    :    {{employees[1].Work}} </li><br>
+                      <li>Personal:{{employees[1].Personal}}</li>
+                  </ul>
+                    <span class="glyphicon glyphicon-envelope" id="msg"></span>
+                </div>
+                <div  class=" pull-right col-lg-5 col-md-5 col-sm-5 col-xs-5 infoBox">
+                    <ul class="list-unstyled">
+                        <li>Work:{{employees[1].Work}}</li>
+                        <li>home:{{employees[1].Home}}</li>
+                        <li>Mobile:{{employees[1].Mobile}}</li>
+                    </ul>
+                    
+                </div>
+            <br><br></div><br><br><br><br>
+            <h4>Home Address</h4>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainBox" >
+                <span><a href="#"  style="color:orange" class="pull-right">Edit</a></span>
+                <br>
+                <div class="infoBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    {{employees[1].HomeAddress}}
+         <!--
+                    <ul>
+                        <li>9805 Double R Blvd</li>
+                        <li>Tuscon, AZ</li>
+                        <li>United States  87152</li></ul>
+-->          <br>   </div>
+            </div>
+            <h4>Personal Information</h4>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainBox">
+                 <span><a href="#" style="color:orange" class="pull-right">Edit</a></span>
+                <div class="infoBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="pull-left"  style="margin-left:15%;">
+                        Birthdate:{{employees[1].Birthdate}}<br>
+                        Gender:{{employees[1].Gender}}
+                    </span>                             				     
+                    <span>
+                                SSN:{{employees[1].SSN}}<br>
+                                Enthicity:{{employees[1].Enthicity}}
+                    </span>
+                    
+                </div>
+          <br>  </div><br>
+            <h4>Personal Status</h4>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainBox">
+                 <span><a href="#" style="color:orange" class="pull-right" >Edit</a></span>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoBox">
+                    <span class="pull-left">
+                    Marital Status:{{employees[1].MaritalStatus}}     <br>  
+                Military Status: {{employees[1].MilitaryStatus}}
+                    </span>
+                     <span class="pull-right">   Citizenship:{{employees[1].Citizenship}} <br>                              				  	Disability Status: {{employees[1].DisabilityStatus}}</span>
+                    
+                </div>
+            </div>
+            <h4>Emergerncy Contact</h4>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainBox">
+                  <span><a href="#" class="pull-right" style="color:orange">Add New Contact</a></span>
+                <div class="infoBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3>No Emergerncy Contact</h3>
+                </div>
+                             </div>
+              </div>
+            
+            <div class="myEmp" ng-show="showWorkInfo">
+            
+                <div class="row">
+                
+            <button type="button" class="btn btn-primary pull-right">Request Employment Change</button>
+          <h4 style="margin-left:15px;">Employment Details</h4>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainBox">
+                <br>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 infoBox text-left">
+                    <span>
+                       Business Title:{{employees[1].BusinessTitle}}<br>
+                                  Job:{{employees[1].Job}}<br>
+                           EmployeeID:{{employees[1].EmpId}}<br>
+                        Employee Status:{{employees[1].EmployeeStatus}}
+                        
+                    </span> 
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 infoBox pull-right">
+<!--                    <span id="ew">-->
+                    <span class="col-lg-offset-4 col-lg-3 text-left">
+                        Department:{{employees[1].Department}}<br>
+                          Location:{{employees[1].Locations}} <br>
+                      Service Date:{{employees[1].ServiceDate}} <br>
+                        Direct Manager:{{employees[1].DirectManager}}
+                    </span>
+                    
+            </div>
+            </div><br>
+            <h4>Compesation Details</h4>
+            <div class="mainBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+                <div class="infoBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="pull-left">
+                        Employee Type:{{employees[1].EmployeeType}}</span>
+                    <span class="pull-right"> Compensation:{{employees[1].Compensation}}</span>
+                    <br><br>
+                   <span class="pull-left"> Standard Hours:{{employees[1].StandardHours}}</span>
+                    </div>
+
+              </div><br> 
+                <a style="color:orange;margin-left:25px;cursor:pointer">Display Charges History<span class="glyphicon glyphicon-chevron-down"></span></a>    
+                </div>
+            </div>
+                
+            
+            </div>
+            
+        
+            
+                
+        
+        
+        
+    
+    </body>
+
+</html>

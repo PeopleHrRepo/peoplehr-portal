@@ -1,0 +1,163 @@
+<html ng-app="landingPage">
+    <head>
+        <link rel="stylesheet" href="../assets/css/bootstrap.css">
+        <script src="../assets/js/angular.min.js"></script>
+        <script src="landingPaging.js"></script>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/bootstrap.js"></script>
+<!--        <link rel="stylesheet" href="../assets/css/jquery.dataTables.min.css">-->
+<!--
+        <script>
+            $(document).ready(function() {
+                $("#allEmp").click(function() {
+                        $('.elementid').css('border-bottom', 'solid 3px cornflowerblue');
+            });
+                });    
+        </script>
+-->
+        <style>
+        th {background-color:cornflowerblue;text-align: center;position: relative;cursor: pointer;}
+            td {cursor: pointer;text-align: center;}
+/*            td:hover {color:red;}*/
+            th {color:white;}
+            tbody>tr:hover {background-color:darkgrey;}
+/*            tbody:inactive {background-color: white;}*/
+            ul>li>a:hover {color:red;} 
+            ul>li>a:focus {color:green;border-bottom-color: yellow;background-color:green;}
+/*            #navTabs {padding-left:15px;}*/
+/*            .elementid {margin-left:25%;}*/
+        </style>
+        
+        
+            <style>
+                    .nav-tabs{
+              background-color:white;
+            }
+
+            .nav-tabs > li > a{
+            /*  border-radius: 5px;*/
+            }
+            .nav-tabs > li > a:hover{
+              background-color:cornflowerblue !important;
+            /*    border-radius: 5px;*/
+                color:#fff;
+            /*    border:1px solid black;*/
+            }
+            .nav-tabs > li.active > a,
+            .nav-tabs > li.active > a:focus,
+            .nav-tabs > li.active > a:hover{
+                background-color: cornflowerblue !important;
+                color:#fff;
+            /*    border:2px solid #3F515F;*/
+            }
+        
+   
+        </style>    
+        
+        
+    </head>
+    <body ng-controller="myCtrl">
+        <div class="container">
+            <div class="row">
+                <header>
+                    <img src="../assets/images/BDsite_TriNet_Passport.jpg" style="margin-left:-25px; width:150px;height:80px;"/>
+                   
+                    <span class="pull-right"><img src="../assets/images/AS.png"></span><br>
+                    <div class="pull-right">
+                    
+                       <ul class="list-inline"><li><a href="">ME</a></li>
+                           <li> <a href="">COMPANY</a></li>
+                        </ul></div>
+                </header>
+<!--                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border:3px solid silver;left:-35px;">    -->
+                     
+                <div class="lead" style="color:cornflowerblue;">Manage Employees<span style="font-size:12px;color:black"><br><a href="">hiDOF, Inc </a></span>
+    </div>
+            <div class="row">
+<!--
+                <ul class="list-inline">
+                    <li><a href="#" class="btn">employeea</a></li>
+                    <li><a href="#" class="btn">employeea</a></li>
+                    <li><a href="#" class="btn">employeea</a></li>
+                    <li><a href="#" class="btn">employeea</a></li>
+                </ul>
+-->
+<!--
+                 <div>
+                    <ul class="list-inline">
+                    <li><a href="#" class="elementid">ALL EMPLOYEES</a></li>    
+                    <li><a href="#" class="elementid">DEPARTMENT</a></li>    
+                    <li><a href="#" class="elementid">LOCATIONS</a></li>    
+                    <li><a href="#" class="elementid">E-FORMS</a></li>    
+                   </ul>
+              
+                
+-->
+                
+                
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#allemployees" ng-click="displayAllEmployees()">ALL EMPLOYEES</a></li>
+                    <li><a data-toggle="tab" href="#department" >DEPARTMENT</a></li>
+                    <li><a data-toggle="tab" href="#location">LOCATION</a></li>
+                    <li><a data-toggle="tab" href="#eforms">E-FORMS</a></li>
+                    <span class="pull-right"><input type="search" class="input" placeholder="Search Employee " ng-model="searchEmployee" style="height:34px;">&nbsp;<a class="btn" style="background-color:orange;height:34px;color:white"> New Hire </a> &nbsp;&nbsp;&nbsp;<a href=""><span class="glyphicon glyphicon-cog"></span></a></span>
+                </ul><br>
+<!--                <div style="background-color:yellow;border-color:red;width:85%;"></div>  -->
+<!--
+                
+               <div class="panel panel-default">
+        <div class="panel-heading">
+      
+-->
+   <div class="tab-content">
+       <div id="allemployees" class="tab-pane fade in active">                 
+            <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>EmployeeName&nbsp;<span class="glyphicon glyphicon-sort-by-alphabet"></span><span style="padding-left:5%">|</span></th>
+                            <th>Position&nbsp;<span class="glyphicon glyphicon-filter"></span>|</th>
+                            <th>Status&nbsp;<span class="glyphicon glyphicon-filter"></span>|</th>
+                            <th>Department&nbsp;<span class="glyphicon glyphicon-filter"></span>|</th>
+                            <th>Locations&nbsp;<span class="glyphicon glyphicon-filter"></span>|</th>
+                            <th>ServiceDate<span style="padding-left:10%">|</span></th>
+                            <th>DirectManager<span style="padding-left:10%">|</span></th>
+                            <th>Contacts</th>
+                        </tr>
+                    </thead> 
+                    
+                <tbody>
+                        <tr ng-repeat="emp in employees | filter:searchEmployee" ng-click="displayEmployee(emp)">
+                            <td>{{emp.EmployeeName}}<br><span class="empid" style="font-size:12px;">EmpID:{{emp.EmpId}}</span></td>
+                            <td>{{emp.Position}}</td>
+                            <td>{{emp.Status}}</td>
+                            <td>{{emp.Department}}</td>
+                            <td>{{emp.Locations}}</td>
+                            <td>{{emp.ServiceDate}}</td>
+                            <td>{{emp.DirectManager}}</td>
+                            <td>&nbsp;&nbsp;<a href=""><span class="glyphicon glyphicon-envelope"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><span class="glyphicon glyphicon-earphone"></span></a></td>
+                            </tr>
+                    </tbody>
+                </table>
+                </div>
+        <div id="department" class="tab-pane fade in"> 
+            <h1>welcome to Hr Department</h1>
+        </div>
+       
+       <div id="location" class="tab-pane fade in">
+           
+        <h1>Hello This is my location</h1>
+       </div>
+       
+      
+        <div id="eforms" class="tab-pane fade in">
+           
+<!--           <div ng-include="'testing.html'"></div>-->
+          <h1> welcome to e-form tabs</h1>
+       </div>
+
+       
+       
+                </div></div></div>
+        </div>
+    </body>
+</html>

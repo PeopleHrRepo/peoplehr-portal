@@ -1,0 +1,19 @@
+ th {background-color:cornflowerblue;text-align: center;position: relative;cursor: pointer;}
+
+
+            td {cursor: pointer;text-align: center;}
+/*            td:hover {color:red;}*/
+            th {color:white;}
+            tbody>tr:hover {background-color:darkgrey;}
+/*            tbody:inactive {background-color: white;}*/
+            ul>li>a:hover {color:red;} 
+            ul>li>a:focus {color:green;border-bottom-color: yellow;background-color:green;}
+/*            #navTabs {padding-left:15px;}*/
+/*            .elementid {margin-left:25%;}*/
+#trinet_passport { 
+    margin-left:-25px; width:150px;height:80px;
+}
+
+#company_info{ font-size:12px;color:black; }
+
+#new_hire { background-color:orange;height:34px;color:white; }
