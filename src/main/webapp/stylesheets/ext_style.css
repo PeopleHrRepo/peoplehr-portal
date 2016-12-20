@@ -10,22 +10,20 @@
     outline: none;
     font-size: 20px;
     transition: 0.4s;
-    margin-left:200px;
+    
     font-weight: bolder;
     margin-top:10px;
 }
 .accordion-inner{
     width:55%;
-    margin-left:220px;
+    
     background-color: white;
 }
 .menu{
     background: #f2f3f4;
-    width:500px;
-    height:100px;
     float:left;
     margin:5px;
-}
+} 
 .menu-heading{
     font-size:20px;
     margin: 5px;
@@ -36,15 +34,15 @@
 .describe{
     margin: 10px;
 }
-#row2{
-    /*margin-left:160px;*/
+/* #row2{
+    margin-left:100px;
     float:right;
-    margin-right: 2%;
+   
 }
 #row1 {
     float:left;
-    margin-left: 2%;
-}
+   
+} */
 
 .warning {
     left:600px;
@@ -94,16 +92,15 @@
 
 }
 #tax1{
-    width:500px;
+    margin-left:20%;
     border-top:solid 2px black;
-
-
+    float:left;
 }
 #tax2{
     border-top:solid 2px black;
-    width: 500px;
-    float:right;
-
+    margin-left:15%;
+    float:left;
+	
 }
 .tax_heading{
     border-bottom: solid 1px black;
@@ -278,39 +275,16 @@ input[type=radio]{
     height:30px;
     width:auto;
 }
-/*@media  screen and (min-width: 1800px) {
+
+/* @media  screen and (min-width: 1400px) {
     .menu{
-        width:500px;
-        height:100px;
-
-    }
-
-    .success{
-        left:600px;
-    }
-    .warning{
-        left:600px;
-    }
-    #tax1{
-        margin-top:40px;
         width:400px;
-    }
-    #tax2{
-        margin-top:30px;
-        width:400px;
-    }
-
-}*/
-@media  screen and (min-width: 1200px) {
-    .menu{
-        width:350px;
         height:120px;
 
     }
     #row2{
-        /*margin-left:160px;*/
+        margin-left:100px;
         float:left;
-
     }
     .success{
         left:300px;
@@ -325,13 +299,13 @@ input[type=radio]{
     #tax2{
         margin-top:30px;
         width:300px;
-    }
+    } 
 
-}
+} */
 @media  screen and (min-width: 1000px) {
     .menu{
-        width:250px;
-        height:170px;
+        width:350px;
+        height:140px;
         margin-left:0px;
     }
 
@@ -343,22 +317,48 @@ input[type=radio]{
     }
     #tax1{
         margin-top:40px;
-        width:220px;
+        width:300px;
     }
     #tax2{
         margin-top:30px;
-        width:200px;
-    }
+        width:300px;
+    } 
 
+}
+@media screen and (min-width:1300px){
+	 .menu{
+        width:450px;
+        height:100px;
+	
+    }
+    #row1{
+    	margin-left:100px;
+    	
+    }
+    #row2{
+        margin-left:100px;
+        
+    }
+    .success{
+        left:400px;
+    }
+    .warning{
+        left:400px;
+    }
 }
 @media  screen and (min-width: 1600px) {
     .menu{
-        width:450px;
+        width:500px;
         height:100px;
-
+	
+    }
+    #row1{
+    	margin-left:100px;
+    	
     }
     #row2{
-        margin-left:120px;
+        margin-left:100px;
+        
     }
     .success{
         left:600px;
@@ -366,13 +366,6 @@ input[type=radio]{
     .warning{
         left:600px;
     }
-    #tax1{
-        margin-top:40px;
-        width:400px;
-    }
-    #tax2{
-        margin-top:30px;
-        width:400px;
-    }
+  
 
 }
