@@ -175,6 +175,19 @@ button {
     text-decoration: none;
     cursor: pointer;
 }
+.close5 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close5:hover,
+.close5:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 .modal2 {
     display: none;
     position: fixed;
