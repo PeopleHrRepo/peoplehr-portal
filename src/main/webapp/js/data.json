@@ -5,7 +5,7 @@
 		{"GeneralInformation":"General Information"},		
 		{"OtherHealthPlans":"Other Health Plans"},
 		{"SummaryPlanDescription":"Summary Plan Description"},
-		{"WhatsChangingMedicalSummary":"What’s Changing Medical Summary"},	
+		{"WhatsChangingMedicalSummary":"Whatâ€™s Changing Medical Summary"},	
 		{"BenefitsAtAGlance":"Benefits At-A-Glance"},	
 		{"CarrierCertificatesandSummaryofBenefitsandCoverages":"Carrier Certificates and Summary of Benefits and Coverages"},{"Medical":"Medical"},	
 		{"Dental":"Dental"},	
@@ -56,7 +56,7 @@
 	"paragraphs":[
 		{"para1":"TriNet Benefits Guidebook and Summary Plan Description (April 01, 2015 - March 31, 2016)"},
 		{"para2":"TriNet Benefits Guidebook and Summary Plan Description (April 01, 2014 - March 31, 2015)"},
-		{"para3":"2015 What’s Changing"},
+		{"para3":"2015 Whatâ€™s Changing"},
 		{"para4":"Glossary of Terms used in the Summary of Benefits and Coverages"},
 		{"para5":"Carrier Certificates (April 01, 2014 - March 31, 2015)"},
 		{"para6":"Carrier Certificates (April 01, 2013 - March 31, 2014)"},
@@ -66,13 +66,13 @@
 		{"para10":"GINA Rights Notice"},
 		{"para11":"HIPAA Privacy Notice"},
 		{"para12":"Michelle's Law Enrollment Rights Notice"},		
-		{"para13":"Newborn’s and Mother’s Health Protection Act"},
-		{"para14":"Women’s Health and Cancer Rights Act"}	
+		{"para13":"Newbornâ€™s and Motherâ€™s Health Protection Act"},
+		{"para14":"Womenâ€™s Health and Cancer Rights Act"}	
 	],
 	"names" : [
-		{ "id1" :1, "title1" : "Newborns’ and Mothers’ Health Protection Act",
+		{ "id1" :1, "title1" : "Newbornsâ€™ and Mothersâ€™ Health Protection Act",
 
-		 "para1":" On September 26, 1996, a Federal law known as the Newborns' and Mothers' Health Protection Act of 1996 (“Newborns' Act”) was enacted to include new protections for mothers and their newborn children with regard to the length of the hospital stay following childbirth. This notice is intended to inform you, in a summary fashion, of your rights under the law.",
+		 "para1":" On September 26, 1996, a Federal law known as the Newborns' and Mothers' Health Protection Act of 1996 (â€œNewborns' Actâ€�) was enacted to include new protections for mothers and their newborn children with regard to the length of the hospital stay following childbirth. This notice is intended to inform you, in a summary fashion, of your rights under the law.",
 
 		 "para2": "Group health plans and health insurance issuers generally may not, under federal law, restrict benefits for any hospital length of stay in connection with childbirth for the mother or newborn child to less than 48 hours following a vaginal delivery, or less than 96 hours following a cesarean section.",
 
@@ -81,11 +81,11 @@
 
 		 "para4":"  In any case, plans and issuers may not, under federal law, require that a provider obtain authorization from the plan or the issuer for prescribing a length of stay not in excess of 48 hours (or 96 hours.)",
 
-		 "para5":" If your state has a law that provides similar hospital stay protections and your plan oﬀers coverage through an insurance policy or HMO, then you may be protected under state law rather than the Newborns' and Mothers' Health Protection Act.",
+		 "para5":" If your state has a law that provides similar hospital stay protections and your plan oï¬€ers coverage through an insurance policy or HMO, then you may be protected under state law rather than the Newborns' and Mothers' Health Protection Act.",
 
 		 "title2":"Notification of Rights under the Women's Health and Cancer Rights Act",
 
-		 "para6":"On October 21, 1998, a Federal law (H.R. 4328) known as the Women's Health and Cancer Rights Act of 1998 (“Women's Health Act”) was enacted requiring group health plans and insurance companies that provide coverage for mastectomies to provide certain mastectomy-related benefits or services to plan participants or beneficiaries. This notice is intended to inform you, in a summary fashion, of your rights under the law.",
+		 "para6":"On October 21, 1998, a Federal law (H.R. 4328) known as the Women's Health and Cancer Rights Act of 1998 (â€œWomen's Health Actâ€�) was enacted requiring group health plans and insurance companies that provide coverage for mastectomies to provide certain mastectomy-related benefits or services to plan participants or beneficiaries. This notice is intended to inform you, in a summary fashion, of your rights under the law.",
 
 		 "para7":" Under the law, a group health plan participant or beneficiary who is receiving benefits in connection with a mastectomy, and who elects breast reconstruction in connection with the mastectomy, is entitled to coverage for the following:",
 
@@ -106,18 +106,18 @@
 	"Aflacheadings":[
 		{"h1":"Accident Insurance","p1":"For a covered accident, you may receive cash benefits for use as you see fit"},
 		{"h2":"Cancer Insurance","p2":"For a covered accident, you may receive cash benefits for use as you see fit"},
-		{"h3":"Dental Insurance","p3":"Aflac’s dental insurance policy provides benefits for periodic checkups and cleanings, X-rays, fillings, crowns, and much more."},
-		{"h4":"Hospital Confinement Indemnity","p4":"Aflac’s hospital confinement indemnity insurance policy may provide cash benefits to use as you see fit."},
-		{"h5":"Hospital Intensive Care Insurance","p5":"Aflac’s hospital intensive care insurance policy may provide cash benefits for accidents or illnesses that result in an admission to a hospital’s intensive care unit. "},
-		{"h6":"Life Insurance","p6":"Aflac oﬀers a variety of term and whole life insurance plans"},
-		{"h7":"Specified Disease Insurance","p7":"Aflac’s specified disease insurance policy may provide cash benefits for a specified health event, such as coronary artery bypass, organ transplant or stroke."},
-		{"h8":"Short-Term disability","p8":"Aflac’s short-term disability insurance policy may provide cash benefits for disabilities that result from a covered accident or sickness."},
-		{"h9":"Vision Insurance","p9":"Aflac’s vision insurance policy provides benefits for periodic eye exams, vision correction surgery, and much more."}
+		{"h3":"Dental Insurance","p3":"Aflacâ€™s dental insurance policy provides benefits for periodic checkups and cleanings, X-rays, fillings, crowns, and much more."},
+		{"h4":"Hospital Confinement Indemnity","p4":"Aflacâ€™s hospital confinement indemnity insurance policy may provide cash benefits to use as you see fit."},
+		{"h5":"Hospital Intensive Care Insurance","p5":"Aflacâ€™s hospital intensive care insurance policy may provide cash benefits for accidents or illnesses that result in an admission to a hospitalâ€™s intensive care unit. "},
+		{"h6":"Life Insurance","p6":"Aflac oï¬€ers a variety of term and whole life insurance plans"},
+		{"h7":"Specified Disease Insurance","p7":"Aflacâ€™s specified disease insurance policy may provide cash benefits for a specified health event, such as coronary artery bypass, organ transplant or stroke."},
+		{"h8":"Short-Term disability","p8":"Aflacâ€™s short-term disability insurance policy may provide cash benefits for disabilities that result from a covered accident or sickness."},
+		{"h9":"Vision Insurance","p9":"Aflacâ€™s vision insurance policy provides benefits for periodic eye exams, vision correction surgery, and much more."}
 	],
 	"BGB":[
 		{"title1":"TriNet Benefits Guidebook and Summary Plan Description (April 01, 2015 - March 31, 2016)"},
 		{"title2":"TriNet Benefits Guidebook and Summary Plan Description (April 01, 2014 - March 31, 2015)"},
-		{"title3":"The TriNet Benefit Guidebook contains information that’s important to you and your family about:"},
+		{"title3":"The TriNet Benefit Guidebook contains information thatâ€™s important to you and your family about:"},
 		{"list1":"Who is eligible for coverage"},
 		{"list2":"How to enroll and how premiums are taxed"},
 		{"list3":"How to change your benefits"},
@@ -132,12 +132,12 @@
     
     
      "heading" : [
-                    { "id" :"1", "title1" : "Benefits Carrier Contact Chart(April 01, 2015 - March 31, 2016)","image1":"images/pdf.png",
+                   {  "title10" : "Benefits Carrier Contact Chart(April 01, 2015 - March 31, 2016)","image10":"images/pdf.png"},
                     
                   
-                     "title2" : "Benefits Carrier Contact Chart(April 01, 2015 - March 31, 2016)", "image2":"images/pdf.png",
+                   {  "title11" : "Benefits Carrier Contact Chart(April 01, 2015 - March 31, 2016)", "image11":"images/pdf.png"},
                     
-                       "para":"Available physicians and provider information can be obtained in a variety of ways; you can call member services or access the on-line directories from the web. If you have a question concerning services and/or prescriptions, you may contact the plan directly.To view physicians and provider information click on the following links."
+                    {   "para123":"Available physicians and provider information can be obtained in a variety of ways; you can call member services or access the on-line directories from the web. If you have a question concerning services and/or prescriptions, you may contact the plan directly.To view physicians and provider information click on the following links."
                     
                     }
                     ]
