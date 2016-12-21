@@ -357,7 +357,7 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
             $scope.error=true;
         }
         else{
-            $scope.count=0;
+            $scope.count= 0;
         }
 
     }
