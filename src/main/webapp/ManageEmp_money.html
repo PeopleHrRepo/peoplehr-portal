@@ -970,7 +970,7 @@
                 <br/>
 
                 <div class="modal-body">
-                    <form style="display: inline-block" ng-submit="endpayment(emp1,$index,rowno)">
+                    <form style="display: inline-block" ng-submit="endpayment(emp1,$index)">
                         <table border="0" style="border-collapse: separate;text-align: right;border-spacing:1em;;color:#777777">
                             <tr>
                                 <td> PayTo:</td>
@@ -1019,6 +1019,66 @@
                 <br/>
             </div>
         </div>
+
+<div id="endpay1" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close5">&times;</span>
+            <h3 style="color:white">End Payment</h3>
+        </div>
+        <br/>
+
+        <div class="modal-body">
+            <form style="display: inline-block" ng-submit="endpayment1(emp2,$index)">
+                <table border="0" style="border-collapse: separate;text-align: right;border-spacing:1em;;color:#777777">
+                    <tr>
+                        <td> PayTo:</td>
+                        <td style="font-weight: bold;text-align:left">{{name}}Jennifer M. Blaire (EMP ID: 0000122158)</td>
+                    </tr>
+                    <tr>
+                        <td>Begin Date :</td>
+                        <td style="text-align:left">{{emp2.begindate}}</td>
+                    </tr>
+                    <tr>
+                        <td>End Date :</td>
+                        <td style="text-align:left">
+                            <div class="datepickerdemo" layout="column" ng-cloak>
+                                <md-datepicker
+                                        ng-model="enddate"
+                                        md-placeholder="Enter date">
+                                </md-datepicker>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Goal Amount :</td>
+                        <td style="text-align:left">{{emp2.goalAmount}}</td>
+                    </tr>
+                    <tr>
+                        <td>Earn Type :</td>
+                        <td style="text-align: left">{{emp2.earntype}}</td>
+                    </tr>
+                    <tr>
+                        <td> Earn Amount :<sub style="display: flex">(selected per pay frequency)</sub>
+                        </td>
+                        <td style="text-align:left">{{emp2.earnamount}}</td>
+                    </tr>
+                    <tr>
+                        <td>Payment Frequency :</td>
+                        <td style="text-align: left"> {{emp2.payfrequency}}</td>
+                    </tr>
+                </table>
+                <br>
+                <div style="float:right">
+                    <input type="submit"   value="Submit" style="border:none;background-color:orangered;color:white;height:30px;width:auto" />
+                    <input type="reset" value="Cancel" style="background-color: darkgrey;border:none;color:white;height:30px;width:auto" />
+                </div>
+            </form>
+        </div>
+        <br/>
+    </div>
+</div>
 
         <!--hdjsd-->
 
@@ -1150,10 +1210,10 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
+                            <td> </td>
+                            <td> </td>
                             <td>
-                                <button type="submit" style="color:white;background-color: dimgrey" ng-click="onChange(rowno,emp2)">End Payment</button>
+                                <button type="submit" style="color:white;background-color: dimgrey" ng-click="clickChange($index,emp2)">End Payment</button>
                             </td>
                         </tr>
                     </table>

@@ -26,6 +26,12 @@ var span4=document.getElementsByClassName("close4")[0];
 span4.onclick = function() {
     endpay.style.display = "none";
 }
+
+var endpay1=document.getElementById('endpay1');
+var span5=document.getElementsByClassName("close5")[0];
+span5.onclick = function() {
+    endpay1.style.display = "none";
+}
 var endpaysucess=document.getElementById("endpaysucess");
 var span5=document.getElementsByClassName("endclose")[0];
 span5.onclick = function() {
@@ -175,6 +181,13 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
         emp.goalAmount = "N/A";
         $scope.emp1 = emp;
     }
+    $scope.clickChange=function(index,emp) {
+        ce.style.display="none";
+        endpay1.style.display = "block";
+        emp.goalAmount = "N/A";
+        $scope.emp2 = emp;
+    }
+
 
     $scope.personal = function () {
         $scope.isPersonal=true;
@@ -268,6 +281,21 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
         $scope.empdetails[index].push(emp1);
         $scope.enddate=new Date();
     }
+    $scope.endpayment1=function(emp2,index) {
+        endpaysucess.style.display="block";
+        endpay1.style.display = "none";
+        $scope.emp2.status="Ended";
+        if($scope.enddate=='NoEndDate') {
+            $scope.enddate=$filter('date')(new Date(), 'MM/dd/yyyy');
+        }
+        else {
+            $scope.enddate=$filter('date')($scope.enddate, 'MM/dd/yyyy');
+        }
+        $scope.emp2.enddate=$scope.enddate;
+        $scope.empdetails[$scope.rowno].status= $scope.emp2.status;
+        $scope.empdetails[$scope.rowno].enddate= $scope.enddate;
+        $scope.enddate=new Date();
+    }
 
     $scope.showdetails=function(emp,index) {
         $scope.rowno=index;
@@ -296,15 +324,11 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
             $scope.emp2.earntype=emp.earntype;
             $scope.emp2.enddate=emp.enddate;
                 ce.style.display="block";
+                $scope.rowno=index;
         }
 
     }
-    $scope.clickChange=function(rowno,emp2) {
-        ce.style.display="none";
-        endpay.style.display = "block";
-        emp.goalAmount = "N/A";
-        $scope.emp2 = emp2;
-    }
+
 
     //taxwith holding
     $scope.date = new Date();
@@ -319,7 +343,7 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
     $scope.check4=false;
     $scope.agreement=true;
     $scope.radio=true;
-    $scope.radio1=true;
+    $scope.radio1= true;
     $http.get("javascript/data.json").then(function(response){
         $scope.values1=response.data;
 
@@ -333,7 +357,7 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
             $scope.error=true;
         }
         else{
-            $scope.count=0;
+            $scope.count= 0;
         }
 
     }
@@ -429,6 +453,9 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
     $scope.close=function(){
         $scope.success=false;
     }
+    $scope.viewdetails=function() {
+        modalreceipt.style.display = "block";
+    }
 
 
 });
@@ -436,6 +463,7 @@ var modalreceipt=document.getElementById('myModalreceipt');
 var btnmodalrec=document.getElementById('btnrec');
 var spanreceipt=document.getElementsByClassName("closereceipt")[0];
 btnmodalrec.onclick = function() {
+    alert("sdnk");
     modalreceipt.style.display = "block";
 }
 spanreceipt.onclick = function() {

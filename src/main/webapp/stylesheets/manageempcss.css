@@ -175,6 +175,19 @@ button {
     text-decoration: none;
     cursor: pointer;
 }
+.close5 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close5:hover,
+.close5:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 .modal2 {
     display: none;
     position: fixed;
@@ -280,11 +293,11 @@ div#rightalign {
     width:auto;
 }
 #sub:disabled {
-    background-color:lightgray;
+    background-color: lightgray;
     border:none;
     color:white;
     height:30px;
-    width:auto;
+    width: auto;
 }
 
 
