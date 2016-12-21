@@ -93,13 +93,13 @@ cancel.onclick=function(){
 
 var app=angular.module("myApp",['ngMaterial','ngMessages']);
 app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
-    $http.get("moneyinfo").then(function (response) {
+    $http.get("javascript/moneyinfo").then(function (response) {
         $scope.empdetails = response.data.transaction;
 
     });
     $http({
         method : "GET",
-        url : 'employees.json'
+        url : 'javascript/employees.json'
     }).then(function mySucces(response) {
         $scope.employees = response.data.employees;
     }, function myError(response) {
@@ -111,7 +111,7 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
     $http({
 
         method : "GET",
-        url : "statement.json"
+        url : "javascript/statement.json"
     }).then(function mySucces(response) {
         $scope.statement = response.data.statement;
     }, function myError(response) {
@@ -344,7 +344,7 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
     $scope.agreement=true;
     $scope.radio=true;
     $scope.radio1=true;
-    $http.get("data.json").then(function(response){
+    $http.get("javascript/data.json").then(function(response){
         $scope.values1=response.data;
 
     });
