@@ -15,6 +15,8 @@
 				$("#first").click(function(){
 
 					$("#panel").slideDown("slow");
+                    $("#content").height(1550);
+                    
 					/*$("#popover-header-content clearfix").slideUp("slow");*/
 
 
@@ -22,6 +24,8 @@
 				$("#second").click(function(){
 
 					$("#panel").slideDown("slow");
+                    $("#content").height(350);
+                     
 					/*$("#popover-header-content clearfix").slideUp("slow");*/
 
 
@@ -29,30 +33,37 @@
 				$("#third").click(function(){
 
 					$("#panel").slideDown("slow");
+                     $("#content").height(200);
+                     
 					/*$("#popover-header-content clearfix").slideUp("slow");*/
 				});
 				$("#fourth").click(function(){
 
 					$("#panel1").slideDown("slow");
+                     $("#content1").height(850);
 				});
 
 $("#sixth").click(function(){
 
 					$("#panel1").slideDown("slow");
+      $("#content1").height(1200);
 				});
 
 
 				$("#eight").click(function(){
 
 					$("#panel2").slideDown("slow");
+                      $("#content2").height(200);
 				});
 				$("#ninth").click(function(){
 
 					$("#panel2").slideDown("slow");
+                      $("#content2").height(550);
 				});
 				$("#tenth").click(function(){
 
 					$("#panel2").slideDown("slow");
+                      $("#content2").height(850);
 				});
 
 			});
@@ -272,7 +283,7 @@ $("#sixth").click(function(){
 					<div ng-include='"htmls/Benifits  Summary.html"'></div>
 				</div>	
 			</ng-popover>			
-			<div id="panel" ng-show="less" ng-hide="more" style="height:1570px;"></div>
+			<div id="panel" ng-show="less" ng-hide="more"><div id="content"></div></div>
 			<div class="row" class="popover-demo-container">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 					<div class="customBox" id="fourth" ng-click="slim1()"><span class="button ng-popover-trigger" id="custom-popover1"><h4>{{heading4}}</h4><p ng-hide="less1" ng-show="more1">{{para44}}</p></span>
@@ -308,7 +319,7 @@ $("#sixth").click(function(){
 						<div ng-include='"htmls/stateandfederal.html"'></div>
 					</div>	
 				</ng-popover>
-			<div id="panel1" ng-show="less1" ng-hide="more1" style="height:1550px;"></div>
+			<div id="panel1" ng-show="less1" ng-hide="more1"><div id="content1"></div></div>
 
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -376,7 +387,7 @@ $("#sixth").click(function(){
 					<div ng-include='"htmls/Aflac Benifits.html"'></div>
 				</div>	
 			</ng-popover>	
-			<div id="panel2" ng-show="less3" ng-hide="more3" style="height:380px;"></div>
+			<div id="panel2" ng-show="less3" ng-hide="more3"><div id="content2"></div></div>
 
 
 			<h3>{{BenifitsCarriers}}</h3>
