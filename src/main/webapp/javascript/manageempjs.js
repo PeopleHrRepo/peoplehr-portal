@@ -343,7 +343,7 @@ app.controller("myCtrl",function($scope,$http,$filter,$timeout) {
     $scope.check4=false;
     $scope.agreement=true;
     $scope.radio=true;
-    $scope.radio1=true;
+    $scope.radio1= true;
     $http.get("javascript/data.json").then(function(response){
         $scope.values1=response.data;
 

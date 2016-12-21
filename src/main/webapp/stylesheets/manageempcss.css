@@ -293,7 +293,7 @@ div#rightalign {
     width:auto;
 }
 #sub:disabled {
-    background-color:lightgray;
+    background-color: lightgray;
     border:none;
     color:white;
     height:30px;
