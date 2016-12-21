@@ -1,16 +1,16 @@
 {
          "images" : [
-                 { "id" : 1,  "image1" : "images/aetna.png",
-                   "id" : 2,  "image2" : "images/florida1.png" ,                 
-                   "id" : 3,  "image3" : "images/bluecross1.png",
-                   "id" : 4,  "image4" : "images/bluecalifornia.png",
-                   "id" : 5,   "image5" : "images/cigna.png",
-                   "id" : 6,   "image6" : "images/grouphealth.png",
-                   "id" : 7,   "image7" : "images/metlife.png",                  
-                   "id" : 8,   "image8" : "images/kaiser.png",         
+                 { "id1" : 1,  "image1" : "images/aetna.png",
+                   "id2" : 2,  "image2" : "images/florida1.png" ,                 
+                   "id3" : 3,  "image3" : "images/bluecross1.png",
+                   "id4" : 4,  "image4" : "images/bluecalifornia.png",
+                   "id5" : 5,   "image5" : "images/cigna.png",
+                   "id6" : 6,   "image6" : "images/grouphealth.png",
+                   "id7" : 7,   "image7" : "images/metlife.png",                  
+                   "id8" : 8,   "image8" : "images/kaiser.png",         
                   
-                   "id" : 9,   "image9" : "images/triples.png",
-                   "id" : 10,   "image10" : "images/tufts.png"                   
+                   "id9" : 9,   "image9" : "images/triples.png",
+                   "id10" : 10,   "image10" : "images/tufts.png"                   
                   
                    
                      }

@@ -57,6 +57,22 @@ t.controller("myCtrl",['$scope','$http', 'ngPopoverFactory', function($scope, $h
 				$scope.GeneralNotices = value.GeneralNotices;
 			}
 		});
+		
+		//for benifit contacrt carrier
+		$scope.heading = response.heading;		
+		angular.forEach($scope.heading ,function(value){
+			if(value.title10 != undefined && value.image10 != undefined){
+				$scope.title10 = value.title10;
+				$scope.image10 = value.image10;
+			}
+			if(value.title11 != undefined && value.image11 != undefined){
+				$scope.title11 = value.title11;
+				$scope.image11 = value.image11;
+			}
+			if(value.para123 != undefined){
+				$scope.para123 = value.para123;
+			}
+		});
 
 		//for row1
 		$scope.oneRow = response.rowOne;		
@@ -162,7 +178,8 @@ t.controller("myCtrl",['$scope','$http', 'ngPopoverFactory', function($scope, $h
 				$scope.fifteen = value.dest15;				
 			}
 			if(value.dest16 != undefined){
-				$scope.sixteen = value.dest16;				
+				$scope.sixteen = value.dest16;	                                
+				
 			}
 			if(value.dest17 != undefined){
 				$scope.seventeen = value.dest17;				
@@ -340,14 +357,20 @@ t.controller("myCtrl",['$scope','$http', 'ngPopoverFactory', function($scope, $h
 
 	}
 	
+	$http.get("js/data.json").success(function(response){		
+		//for headings		
+		$scope.heading12 = response.heading;
+		
+		console.log($scope.heading12);
+		
+		}
+	);
+	
+	
     $http.get("js/data.json")
-    .then(function(response) {    
-       $scope.result=response.data;
-		
-		
-       
-        
-        
+    .then(function(response) { 
+    	
+       $scope.result=response.data; 
 });
 	$scope.closePopover = function(trigger){		 
 		ngPopoverFactory.closePopover(trigger);
@@ -378,57 +401,60 @@ t.controller("myCtrl",['$scope','$http', 'ngPopoverFactory', function($scope, $h
     
     
        
-   $(document).on('show','.accordion', function (e) {
-         //$('.accordion-heading i').toggleClass(' ');
-         $(e.target).prev('.accordion-heading').addClass('accordion-opened');
-    });
+	  
     
-    $(document).on('hide','.accordion', function (e) {
-        $(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
-        //$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
-    });
+	   $(document).on('show','.accordion', function (e) {
+	         //$('.accordion-heading i').toggleClass(' ');
+	         $(e.target).prev('.accordion-heading').addClass('accordion-opened');
+	    });
+	    
+	    $(document).on('hide','.accordion', function (e) {
+	        $(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
+	        //$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
+	    });
 
 
-$http.get("js/titles.json")
-    .then(function(response) {
-        $scope.titles =response.data;    
-       console.log($scope.titles);
-         
-    });
-    
-    
-    $http.get("js/headings.json")
-    .then(function(response) {
-        $scope.headings =response.data;      
-       console.log( $scope.headings);
-      
-    });
-   
-      
-    $http.get("js/images.json")
-    .then(function(response) {
-        $scope.image =response.data; 
-        console.log($scope.image);
-   
-        
-    });
-	
-	/*$http.get("json/data.json")
-    .then(function(response) {
-      
-       $scope.results=response.data;
-        console.log($scope.results);
-      
-       
-  });*/
-	
-   
-    
-    
+	/*$http.get("./json/titles.json")
+	    .then(function(response) {
+	        $scope.titles =response.data;
+	    
+	       console.log($scope.titles);
+	         
+	    });
+	    
+	    
+	    $http.get("./json/headings.json")
+	    .then(function(response) {
+	        $scope.headings =response.data;      
+	       console.log( $scope.headings);
+	      
+	    });
+	   
+	      
+	    $http.get("./json/images.json")
+	    .then(function(response) {
+	        $scope.image =response.data; 
+	        console.log($scope.image);
+	   
+	        
+	    });
+		
+		$http.get("./json/data.json")
+	    .then(function(response) {
+	      
+	       $scope.results=response.data;
+	        console.log($scope.results);
+	      
+	       
+	  });*/
+		
+	   
+	    
+	    
 
 
-    
-    
+	   
+	    
     
 	
 	
