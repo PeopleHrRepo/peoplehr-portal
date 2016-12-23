@@ -73,6 +73,37 @@ t.controller("myCtrl",['$scope','$http', 'ngPopoverFactory', function($scope, $h
 				$scope.para123 = value.para123;
 			}
 		});
+		
+		
+		
+		
+		//for popup
+		/*$scope.titlesdata11 = response.titlesdata;		
+		angular.forEach($scope.titlesdata11  ,function(value){
+			
+			
+			if(value.titlesdata1 != undefined ){
+				
+				alert("hai");
+				$scope.title123 = value.titlesdata1;
+				console.log($scope.title123)
+				
+			}
+			if(value.titlesdata2 != undefined ){
+				$scope.title124 = value.titlesdata2;
+				console.log($scope.title124)
+			}
+			if(value.titlesdata3 != undefined){
+				$scope.title125 = value.titlesdata3;
+				console.log($scope.title125)
+			}
+		});*/
+		
+		
+		
+		
+		
+		
 
 		//for row1
 		$scope.oneRow = response.rowOne;		
@@ -357,21 +388,29 @@ t.controller("myCtrl",['$scope','$http', 'ngPopoverFactory', function($scope, $h
 
 	}
 	
-	$http.get("js/data.json").success(function(response){		
-		//for headings		
-		$scope.heading12 = response.heading;
+	$http.get("js/data1.json").then(function(response){		
+			
+		$scope.headingdata = response.data;		
 		
-		console.log($scope.heading12);
-		
-		}
-	);
-	
-	
+		});
+
     $http.get("js/data.json")
     .then(function(response) { 
     	
        $scope.result=response.data; 
-});
+        });
+    
+    
+   $http.get("js/images.json")
+    .then(function(response) {     	
+       $scope.content=response.data; 
+      
+        console.log($scope.content)
+        });
+    
+   
+    
+    
 	$scope.closePopover = function(trigger){		 
 		ngPopoverFactory.closePopover(trigger);
 		$scope.more=true;

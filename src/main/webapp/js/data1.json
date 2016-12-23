@@ -1,32 +1,15 @@
 {
-         "records" : [
-         { "id1" : 1,"image1":"images/pdf.png", "para1" : "TriNet Benefits Guidebook and Summary Plan Description (April 01, 2015 - March 31, 2016)",
-
-          "id2" : 2,"image2":"images/pdf.png", "para2" : "TriNet Benefits Guidebook and Summary Plan Description (April 01, 2014 - March 31, 2015)",
-          
-           "id3" : 3,"image3":"images/pdf.png", "para3" : "2015 What’s Changing",
-
-            "id4" : 4,"image4":"images/pdf.png", "para4" : "Benefits At-A-Glance All Plans",
-
-            "id5" : 5,"image5":"images/pdf.png", "para5" : "2015 What’s Changing",
-            "id6" : 6,"image6":"images/pdf.png", "para6" : "Benefits At-A-Glance Life and Disability",
-            "id7" : 7,"image7":"images/pdf.png", "para7" : "Benefits At-A-Glance Florida",
-            "id8" : 8,"image8":"images/pdf.png", "para8" : "Benefits At-A-Glance Mountain West",
-            "id9" : 9,"image9":"images/pdf.png", "para9" : "Benefits At-A-Glance NE/Midwest",
-          
-          
-          
-          
-            "id10" : 10,"image10":"images/pdf.png", "para10" : "Benefits At-A-Glance North Carolina",
-            "id11" : 11,"image11":"images/pdf.png", "para11" : "Benefits At-A-Glance Northwest",
-            "id12" : 12,"image12":"images/pdf.png", "para12" : "Benefits At-A-Glance NY/TriState",
-            "id13" : 13,"image13":"images/pdf.png", "para13" : "Benefits At-A-Glance South Central",
-            "id14" : 14,"image14":"images/pdf.png", "para14" : "Benefits At-A-Glance Southeast",
-           "id15" : 15,"image15":"images/pdf.png", "para15" : "Glossary of Terms used in the Summary of Benefits and Coverages"
-                  
-                     }
-                 
-                 ]
+        "titlesdata":  [
+                       {"titledata1":"AtenaEPO",
+                       "titledata2":"AtenaHMO",
+                       "titledata3":"AtenaPOS",
+                       "titledata3":"AtenaPPO"
+                       }
+    
+                    ]
+    
+             
+    
 }
 
 

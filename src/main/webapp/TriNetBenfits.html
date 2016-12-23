@@ -1,22 +1,31 @@
 <html>
-	<head>		                   		
+	<head>				
 		<meta charset="UTF-8">
 		<title>TriNet</title>		
-		<link rel="stylesheet" href="css/trinetBenifits.css">		
+		<link rel="stylesheet" href="css/trinetBenifits.css">	
 		<script src="js/angular.js"></script>
 		<script src="js/angular-animate.js"></script>
 		<script src="js/angular-sanitize.js"></script>
 		<script src="js/ui-bootstrap-tpls-2.3.1.min.js"></script>	
 		<script src="js/trinetBenifits.js"></script>
 		<script src="js/jquery.min.js"></script>
+		
+		
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		
+		
+		
 		<script>
 			$(document).ready(function(){
 
 				$("#first").click(function(){
 
 					$("#panel").slideDown("slow");
-                    $("#content").height(1550);
-                    
+					
+				
 					/*$("#popover-header-content clearfix").slideUp("slow");*/
 
 
@@ -24,8 +33,7 @@
 				$("#second").click(function(){
 
 					$("#panel").slideDown("slow");
-                    $("#content").height(350);
-                     
+				
 					/*$("#popover-header-content clearfix").slideUp("slow");*/
 
 
@@ -33,37 +41,30 @@
 				$("#third").click(function(){
 
 					$("#panel").slideDown("slow");
-                     $("#content").height(200);
-                     
 					/*$("#popover-header-content clearfix").slideUp("slow");*/
 				});
 				$("#fourth").click(function(){
 
 					$("#panel1").slideDown("slow");
-                     $("#content1").height(850);
 				});
 
 $("#sixth").click(function(){
 
 					$("#panel1").slideDown("slow");
-      $("#content1").height(1200);
 				});
 
 
 				$("#eight").click(function(){
 
 					$("#panel2").slideDown("slow");
-                      $("#content2").height(200);
 				});
 				$("#ninth").click(function(){
 
 					$("#panel2").slideDown("slow");
-                      $("#content2").height(550);
 				});
 				$("#tenth").click(function(){
 
 					$("#panel2").slideDown("slow");
-                      $("#content2").height(850);
 				});
 
 			});
@@ -75,7 +76,7 @@ $("#sixth").click(function(){
 
 	<body ng-app="myApp" ng-controller="myCtrl">     
         
-        
+       
        
         
 
@@ -92,81 +93,54 @@ $("#sixth").click(function(){
 		<div class="container-fluid">
    
           
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  
+       
+      <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <p class="modal-title">Medical Atena</p>
+          <h4 class="modal-title">Medical-Atena</h4>
         </div>
         <div class="modal-body">
-            
-            
-            
-            
-            
-                         <!--accordian code !-->
-            
-            
-            
+        
+        
               
     <div class="accordion" id="accordion2" >
-           <div class="accordion-group" ng-repeat="x in titles.records">
-               
+           <div class="accordion-group"  ng-repeat="x in headingdata.titlesdata">              
                
          <div class="section">        
            <div class="accordion-heading"  >
-           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">{{x.title1}}</a>
+           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">{{x.titledata1}}</a>
             </div>
          <div id="collapseOne" class="accordion-body collapse"    >
-          <div class="accordion-inner"  ng-repeat="x in headings.records">
+          <div class="accordion-inner"   >
              
-              
-              
-              
-              
-              
-                 <table style="padding-top:10px; margin-top:40px;" ng-repeat="img in image.images">
+            
+                 <table style="padding-top:10px; margin-top:40px; border:0;"  >
                         
-                     <tr style=" border-bottom: 1px solid green;">
-                      <th  style="border-right:1px solid green;">{{x.heading1}}</th>
-                      <th style="border-right:1px solid green;">{{x.heading2}}</th>
-                      <th >{{x.heading3}}</th>
+                     <tr style=" border-bottom: 1px solid green; background-color:#eef3f3">
+                        <th  style="border-right:1px solid green;">Plans</th> 
+                        
+                        <th  style="border-right:1px solid green;">Carrier Certificates</th>  
+                        
+                         <th  style="border-right:1px solid green;">Summary Of Benefits And Coverage</th>                        
+                      
                     </tr>
                      
-                     <tr>
-                       <td>{{img.para1}}</td>
-                       <td><a href="home.html" target="_blank" > <img ng-src="{{img.image1}}"> &nbsp;&nbsp;{{img.date1}}</a></td>
-                         <td><a href="home.html" target="_blank" ><img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date1}}<br>
-                           <img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date2}}</a></td>
+                     <tr ng-repeat="y in content.imagesdata ">
+                       <td>{{y.Para}}</td>
+                       <td><a href="home.html" target="_blank" > <img ng-src="{{y.image}}"> &nbsp;&nbsp;{{y.date}}</a></td>
+                         <td><a href="home.html" target="_blank" ><img ng-src="{{y.image}}">&nbsp;&nbsp;{{y.date}}<br>
+                         <img ng-src="{{y.image}}">&nbsp;&nbsp;{{y.date1}}</a></td>
                      </tr>
                          
                   
-                     <tr>                         
-                        <td>{{img.para2}}</td>
-                         <td><a href="home.html" target="_blank"><img ng-src="{{img.image2}}">&nbsp;&nbsp;{{img.date1}}</a></td>
-                         <td><a href="home.html"  target="_blank"><img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date1}}<br>
-                            <img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date2}}</a></td>
-
-                     </tr>
-                     
-                     
-                     <tr>
-                         <td>{{img.para3}}</td>
-                         <td><a href="home.html" target="_blank" ><img ng-src="{{img.image3}}">&nbsp;&nbsp;{{img.date1}}</a></td>
-                         <td><a href="home.html" target="_blank" ><img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date1}}<br>
-                            <img ng-src="{{img.image1}}">&nbsp;&nbsp;{{img.date2}}</a></td>
-
-                     </tr>
+                 
                  </table>
               
-              
-              
-              
-           
               
              
          
@@ -179,7 +153,7 @@ $("#sixth").click(function(){
          <div class="section">  
                       
            <div class="accordion-heading"  >
-           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsetwo">{{x.title2}}</a>
+           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsetwo">{{x.titledata2}}</a>
             </div>
          <div id="collapsetwo" class="accordion-body collapse"   >
           <div class="accordion-inner" >
@@ -193,7 +167,7 @@ $("#sixth").click(function(){
                
            <div class="section">           
            <div class="accordion-heading"  >
-           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsethree">{{x.title3}}</a>
+           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsethree">{{x.titledata3}}</a>
             </div>
          <div id="collapsethree" class="accordion-body collapse"   >
           <div class="accordion-inner" >
@@ -212,31 +186,24 @@ $("#sixth").click(function(){
        </div>
       
   </div>
-            
-      <!--accordian code end !-->     
-            
-      <!--accordian code end !-->    
-            
-            
-            
-            
-            
-            
-            
-            
+  
+        
           
         </div>
-       <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>-->
+      
       </div>
       
     </div>
   </div>
-            
-            
-            
-            
+   
+    
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+           
             
 
 			<h1 style="margin-top:50px; margin-left:60px;">{{BenifitsPolicies}}</h1>
@@ -283,7 +250,7 @@ $("#sixth").click(function(){
 					<div ng-include='"htmls/Benifits  Summary.html"'></div>
 				</div>	
 			</ng-popover>			
-			<div id="panel" ng-show="less" ng-hide="more"><div id="content"></div></div>
+			<div id="panel" ng-show="less" ng-hide="more" style="height:1570px;"></div>
 			<div class="row" class="popover-demo-container">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 					<div class="customBox" id="fourth" ng-click="slim1()"><span class="button ng-popover-trigger" id="custom-popover1"><h4>{{heading4}}</h4><p ng-hide="less1" ng-show="more1">{{para44}}</p></span>
@@ -319,7 +286,7 @@ $("#sixth").click(function(){
 						<div ng-include='"htmls/stateandfederal.html"'></div>
 					</div>	
 				</ng-popover>
-			<div id="panel1" ng-show="less1" ng-hide="more1"><div id="content1"></div></div>
+			<div id="panel1" ng-show="less1" ng-hide="more1" style="height:1550px;"></div>
 
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -374,11 +341,6 @@ $("#sixth").click(function(){
             
           
             
-            
-            
-            
-            
-            
 			<ng-popover trigger="custom-popover2" popover-class="custom-popover" direction="bottom" style="float:left;">
 				<div class="popover-header-content clearfix">
 					<span class="button" ng-click="closePopover('custom-popover2')" style="float:right;border:none;" >X</span>
@@ -387,7 +349,7 @@ $("#sixth").click(function(){
 					<div ng-include='"htmls/Aflac Benifits.html"'></div>
 				</div>	
 			</ng-popover>	
-			<div id="panel2" ng-show="less3" ng-hide="more3"><div id="content2"></div></div>
+			<div id="panel2" ng-show="less3" ng-hide="more3" style="height:380px;"></div>
 
 
 			<h3>{{BenifitsCarriers}}</h3>
@@ -395,21 +357,8 @@ $("#sixth").click(function(){
             
             
             
-             
-            
-            
             
 			<div class="row">
-
-
-            <!--   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
--->
-
-
-
-                            
-                            
-
 
 
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
@@ -417,21 +366,6 @@ $("#sixth").click(function(){
 
 						<img ng-src="{{one}}"  style="width:250px; height:100px; padding-left:46px;" data-toggle="modal" data-target="#myModal" ></div>
 				</div>
-
-
-
-                
-                 
-              
-  
-
-
-
-
-
-
-
-
 
 
 
